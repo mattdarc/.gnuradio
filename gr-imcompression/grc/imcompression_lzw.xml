@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<block>
+  <name>lzw</name>
+  <key>imcompression_lzw</key>
+  <category>[Image Processing]/Compression</category>
+  <import>import imcompression</import>
+  <make>imcompression.lzw($bit_num)</make>
+  
+  <param>
+    <name>Number of bits</name>
+    <key>bit_num</key>
+    <value>12</value>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

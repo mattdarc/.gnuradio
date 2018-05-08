@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dir_8b3580433ed736bd0bb7e55abcdfbc62" kind="dir">
+    <compoundname>dip</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <innerfile refid="im2vec_8h">im2vec.h</innerfile>
+    <innerfile refid="image__save_8h">image_save.h</innerfile>
+    <innerfile refid="image__sink_8h">image_sink.h</innerfile>
+    <innerfile refid="image__source_8h">image_source.h</innerfile>
+    <innerfile refid="vec2im_8h">vec2im.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/"/>
+  </compounddef>
+</doxygen>

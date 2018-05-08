@@ -1,0 +1,12 @@
+/home/matt_darc/.gnuradio/gr-dip/build/swig/CMakeFiles/_dip_swig.dir
+/home/matt_darc/.gnuradio/gr-dip/build/swig/CMakeFiles/_dip_swig_doc_tag.dir
+/home/matt_darc/.gnuradio/gr-dip/build/swig/CMakeFiles/_dip_swig_swig_tag.dir
+/home/matt_darc/.gnuradio/gr-dip/build/swig/CMakeFiles/dip_swig_swig_2d0df.dir
+/home/matt_darc/.gnuradio/gr-dip/build/swig/CMakeFiles/dip_swig_swig_doc.dir
+/home/matt_darc/.gnuradio/gr-dip/build/docs/doxygen/CMakeFiles/doxygen_target.dir
+/home/matt_darc/.gnuradio/gr-dip/build/lib/CMakeFiles/gnuradio-dip.dir
+/home/matt_darc/.gnuradio/gr-dip/build/apps/CMakeFiles/pygen_apps_9a6dd.dir
+/home/matt_darc/.gnuradio/gr-dip/build/python/CMakeFiles/pygen_python_a23ac.dir
+/home/matt_darc/.gnuradio/gr-dip/build/swig/CMakeFiles/pygen_swig_d41e0.dir
+/home/matt_darc/.gnuradio/gr-dip/build/lib/CMakeFiles/test-dip.dir
+/home/matt_darc/.gnuradio/gr-dip/build/CMakeFiles/uninstall.dir

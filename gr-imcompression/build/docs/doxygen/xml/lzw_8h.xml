@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="lzw_8h" kind="file">
+    <compoundname>lzw.h</compoundname>
+    <includes refid="api_8h" local="no">imcompression/api.h</includes>
+    <includes local="no">gnuradio/sync_block.h</includes>
+    <includedby refid="lzw__impl_8h" local="no">lzw_impl.h</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="8">
+        <label>imcompression/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="7">
+        <label>lzw.h</label>
+        <link refid="lzw.h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>lzw_impl.h</label>
+        <link refid="lzw__impl_8h"/>
+      </node>
+      <node id="11">
+        <label>lzw.h</label>
+        <link refid="lzw.h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr_1_1imcompression_1_1lzw" prot="public">gr::imcompression::lzw</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1imcompression">gr::imcompression</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/matt_darc/.gnuradio/gr-imcompression/include/imcompression/lzw.h"/>
+  </compounddef>
+</doxygen>

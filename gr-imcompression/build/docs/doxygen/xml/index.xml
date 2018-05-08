@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.5">
+  <compound refid="classgr_1_1imcompression_1_1lzw" kind="class"><name>gr::imcompression::lzw</name>
+    <member refid="classgr_1_1imcompression_1_1lzw_1ad007cd30ca437052e7ebb015cc7036f7" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw_1a421c6333005e0fe4f01c9527155e94a6" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1imcompression_1_1lzw__impl" kind="class"><name>gr::imcompression::lzw_impl</name>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1a4d14513383260c93636e5bcb1e07f3cd" kind="variable"><name>d_bit_num</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1a5432c9a267433c8621128daa21413e16" kind="variable"><name>code_dict</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1ac7ce90c3ad5d5c4243c26b37c71dbf63" kind="function"><name>add_code</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1ae55f256e0e66e38b141ae6414f67e9e1" kind="function"><name>find_code</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1a3acc378601ffd79b0527a8981e758082" kind="function"><name>create_dict</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1a8963bc520a66b8e63d3239617cbf3a61" kind="function"><name>compress</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1a35c3bad8c6ced67941520347240d5154" kind="function"><name>lzw_impl</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1a6e97deb2bfb55947a1b70b3c8dd3b1ed" kind="function"><name>~lzw_impl</name></member>
+    <member refid="classgr_1_1imcompression_1_1lzw__impl_1a9696a812882c77aedf8fc515171a14b2" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="structgr_1_1imcompression_1_1lzw__impl_1_1TrieNode" kind="struct"><name>gr::imcompression::lzw_impl::TrieNode</name>
+    <member refid="structgr_1_1imcompression_1_1lzw__impl_1_1TrieNode_1a1b2d51c88439d39e81ac5cef05e26771" kind="variable"><name>children</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1imcompression" kind="namespace"><name>gr::imcompression</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a9dd23074e30f19abfd62b30571ffeb6e" kind="define"><name>IMCOMPRESSION_API</name></member>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="lzw_8h" kind="file"><name>lzw.h</name>
+  </compound>
+  <compound refid="lzw__impl_8h" kind="file"><name>lzw_impl.h</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_06da8979da0db8e943448f67526f582c" kind="dir"><name>imcompression</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

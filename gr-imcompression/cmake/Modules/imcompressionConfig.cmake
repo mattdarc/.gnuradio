@@ -1,0 +1,30 @@
+INCLUDE(FindPkgConfig)
+PKG_CHECK_MODULES(PC_IMCOMPRESSION imcompression)
+
+FIND_PATH(
+    IMCOMPRESSION_INCLUDE_DIRS
+    NAMES imcompression/api.h
+    HINTS $ENV{IMCOMPRESSION_DIR}/include
+        ${PC_IMCOMPRESSION_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    IMCOMPRESSION_LIBRARIES
+    NAMES gnuradio-imcompression
+    HINTS $ENV{IMCOMPRESSION_DIR}/lib
+        ${PC_IMCOMPRESSION_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+)
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(IMCOMPRESSION DEFAULT_MSG IMCOMPRESSION_LIBRARIES IMCOMPRESSION_INCLUDE_DIRS)
+MARK_AS_ADVANCED(IMCOMPRESSION_LIBRARIES IMCOMPRESSION_INCLUDE_DIRS)
+

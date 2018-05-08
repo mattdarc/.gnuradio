@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.5">
+  <compound refid="classgr_1_1dip_1_1im2vec" kind="class"><name>gr::dip::im2vec</name>
+    <member refid="classgr_1_1dip_1_1im2vec_1a5902c39bd43fb66e18440596939fd4aa" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1dip_1_1im2vec_1a059c467c54f29c8c3bd37cfd6532c637" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1dip_1_1image__save" kind="class"><name>gr::dip::image_save</name>
+    <member refid="classgr_1_1dip_1_1image__save_1a08cca2fc0f00048d1aa5a24e592814ce" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1dip_1_1image__save_1ae3599d57bca489f1123ff21c82bc2fa9" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1dip_1_1image__sink" kind="class"><name>gr::dip::image_sink</name>
+    <member refid="classgr_1_1dip_1_1image__sink_1af70a512d91e4a9f7b5e3a1f0534738c2" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1dip_1_1image__sink_1ae79c72ac03e8942eca4f50cd83ba781a" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1dip_1_1image__source" kind="class"><name>gr::dip::image_source</name>
+    <member refid="classgr_1_1dip_1_1image__source_1af42c431c34c2f0ba11a3f46e7fcf2008" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1dip_1_1image__source_1a5de27daab4ae0acf8a72ceb2546a4aff" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1dip_1_1vec2im" kind="class"><name>gr::dip::vec2im</name>
+    <member refid="classgr_1_1dip_1_1vec2im_1a37062be446d84c91a5589bdfe5843a1f" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1dip_1_1vec2im_1a493a5849b64ca154b5d575760dc0057e" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1dip" kind="namespace"><name>gr::dip</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a62eaa121ef0ee263e3747a7e8e88dbaf" kind="define"><name>DIP_API</name></member>
+  </compound>
+  <compound refid="im2vec_8h" kind="file"><name>im2vec.h</name>
+  </compound>
+  <compound refid="image__save_8h" kind="file"><name>image_save.h</name>
+  </compound>
+  <compound refid="image__sink_8h" kind="file"><name>image_sink.h</name>
+  </compound>
+  <compound refid="image__source_8h" kind="file"><name>image_source.h</name>
+  </compound>
+  <compound refid="vec2im_8h" kind="file"><name>vec2im.h</name>
+  </compound>
+  <compound refid="dir_8b3580433ed736bd0bb7e55abcdfbc62" kind="dir"><name>/home/matt_darc/.gnuradio/gr-dip/include/dip</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/matt_darc/.gnuradio/gr-dip/include</name>
+  </compound>
+</doxygenindex>

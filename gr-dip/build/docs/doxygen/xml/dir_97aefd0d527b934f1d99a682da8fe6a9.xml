@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
+    <compoundname>lib</compoundname>
+    <innerfile refid="im2vec__impl_8h">im2vec_impl.h</innerfile>
+    <innerfile refid="image__save__impl_8h">image_save_impl.h</innerfile>
+    <innerfile refid="image__sink__impl_8h">image_sink_impl.h</innerfile>
+    <innerfile refid="image__source__impl_8h">image_source_impl.h</innerfile>
+    <innerfile refid="vec2im__impl_8h">vec2im_impl.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/matt_darc/.gnuradio/gr-dip/lib/"/>
+  </compounddef>
+</doxygen>

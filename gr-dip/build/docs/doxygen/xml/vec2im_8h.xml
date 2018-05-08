@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="vec2im_8h" kind="file">
+    <compoundname>vec2im.h</compoundname>
+    <includes refid="api_8h" local="no">dip/api.h</includes>
+    <includes local="no">gnuradio/sync_block.h</includes>
+    <includedby refid="vec2im__impl_8h" local="no">vec2im_impl.h</includedby>
+    <incdepgraph>
+      <node id="76">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="75">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="74">
+        <label>dip/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>vec2im.h</label>
+        <link refid="vec2im.h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="78">
+        <label>vec2im_impl.h</label>
+        <link refid="vec2im__impl_8h"/>
+      </node>
+      <node id="77">
+        <label>vec2im.h</label>
+        <link refid="vec2im.h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr_1_1dip_1_1vec2im" prot="public">gr::dip::vec2im</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1dip">gr::dip</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/vec2im.h"/>
+  </compounddef>
+</doxygen>
