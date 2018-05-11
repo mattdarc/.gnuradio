@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
-  <compounddef id="classgr_1_1dip_1_1vec2im" kind="class" prot="public">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classgr_1_1dip_1_1vec2im" kind="class" language="C++" prot="public">
     <compoundname>gr::dip::vec2im</compoundname>
-    <basecompoundref prot="public" virt="virtual">sync_block</basecompoundref>
+    <basecompoundref prot="public" virt="virtual">block</basecompoundref>
     <derivedcompoundref refid="classgr_1_1dip_1_1vec2im__impl" prot="public" virt="non-virtual">gr::dip::vec2im_impl</derivedcompoundref>
     <includes refid="vec2im_8h" local="no">vec2im.h</includes>
       <sectiondef kind="public-type">
@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/vec2im.h" line="39" column="1" bodyfile="/home/matt_darc/.gnuradio/gr-dip/include/dip/vec2im.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/matthew/.gnuradio/gr-dip/include/dip/vec2im.h" line="39" column="1" bodyfile="/home/matthew/.gnuradio/gr-dip/include/dip/vec2im.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -32,7 +32,7 @@
 <para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1dip_1_1vec2im" kindref="compound">dip::vec2im</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1dip_1_1vec2im_1a493a5849b64ca154b5d575760dc0057e" kindref="member">dip::vec2im::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/vec2im.h" line="49" column="1"/>
+        <location file="/home/matthew/.gnuradio/gr-dip/include/dip/vec2im.h" line="49" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -40,34 +40,34 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="45">
-        <label>sync_block</label>
+      <node id="56">
+        <label>block</label>
       </node>
-      <node id="44">
+      <node id="55">
         <label>gr::dip::vec2im</label>
         <link refid="classgr_1_1dip_1_1vec2im"/>
-        <childnode refid="45" relation="public-inheritance">
+        <childnode refid="56" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="46">
+      <node id="57">
         <label>gr::dip::vec2im_impl</label>
         <link refid="classgr_1_1dip_1_1vec2im__impl"/>
-        <childnode refid="44" relation="public-inheritance">
+        <childnode refid="55" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="48">
-        <label>sync_block</label>
+      <node id="59">
+        <label>block</label>
       </node>
-      <node id="47">
+      <node id="58">
         <label>gr::dip::vec2im</label>
         <link refid="classgr_1_1dip_1_1vec2im"/>
-        <childnode refid="48" relation="public-inheritance">
+        <childnode refid="59" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/vec2im.h" line="37" column="1" bodyfile="/home/matt_darc/.gnuradio/gr-dip/include/dip/vec2im.h" bodystart="36" bodyend="50"/>
+    <location file="/home/matthew/.gnuradio/gr-dip/include/dip/vec2im.h" line="37" column="1" bodyfile="/home/matthew/.gnuradio/gr-dip/include/dip/vec2im.h" bodystart="36" bodyend="50"/>
     <listofallmembers>
       <member refid="classgr_1_1dip_1_1vec2im_1a493a5849b64ca154b5d575760dc0057e" prot="public" virt="non-virtual"><scope>gr::dip::vec2im</scope><name>make</name></member>
       <member refid="classgr_1_1dip_1_1vec2im_1a37062be446d84c91a5589bdfe5843a1f" prot="public" virt="non-virtual"><scope>gr::dip::vec2im</scope><name>sptr</name></member>

@@ -1,43 +1,43 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
-  <compounddef id="image__sink__impl_8h" kind="file">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="image__sink__impl_8h" kind="file" language="C++">
     <compoundname>image_sink_impl.h</compoundname>
     <includes refid="image__sink_8h" local="no">dip/image_sink.h</includes>
     <includes local="no">opencv2/core/core.hpp</includes>
     <includes local="no">opencv2/highgui/highgui.hpp</includes>
     <incdepgraph>
-      <node id="54">
+      <node id="56">
         <label>opencv2/core/core.hpp</label>
       </node>
-      <node id="52">
+      <node id="54">
         <label>gnuradio/attributes.h</label>
       </node>
-      <node id="50">
-        <label>dip/image_sink.h</label>
-        <link refid="image__sink_8h"/>
-        <childnode refid="51" relation="include">
-        </childnode>
-        <childnode refid="53" relation="include">
-        </childnode>
-      </node>
       <node id="53">
-        <label>gnuradio/block.h</label>
-      </node>
-      <node id="55">
-        <label>opencv2/highgui/highgui.hpp</label>
-      </node>
-      <node id="51">
         <label>dip/api.h</label>
         <link refid="api_8h"/>
-        <childnode refid="52" relation="include">
+        <childnode refid="54" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="55">
+        <label>gnuradio/block.h</label>
+      </node>
+      <node id="51">
         <label>image_sink_impl.h</label>
-        <link refid="image_sink_impl.h"/>
-        <childnode refid="50" relation="include">
+        <link refid="image__sink__impl_8h"/>
+        <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>opencv2/highgui/highgui.hpp</label>
+      </node>
+      <node id="52">
+        <label>dip/image_sink.h</label>
+        <link refid="image__sink_8h"/>
+        <childnode refid="53" relation="include">
         </childnode>
         <childnode refid="55" relation="include">
         </childnode>
@@ -50,6 +50,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/matt_darc/.gnuradio/gr-dip/lib/image_sink_impl.h"/>
+    <location file="/home/matthew/.gnuradio/gr-dip/lib/image_sink_impl.h"/>
   </compounddef>
 </doxygen>

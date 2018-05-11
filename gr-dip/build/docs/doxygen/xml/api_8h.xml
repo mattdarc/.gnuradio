@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
-  <compounddef id="api_8h" kind="file">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="api_8h" kind="file" language="C++">
     <compoundname>api.h</compoundname>
     <includes local="no">gnuradio/attributes.h</includes>
     <includedby refid="im2vec_8h" local="no">im2vec.h</includedby>
     <includedby refid="image__save_8h" local="no">image_save.h</includedby>
     <includedby refid="image__sink_8h" local="no">image_sink.h</includedby>
     <includedby refid="image__source_8h" local="no">image_source.h</includedby>
+    <includedby refid="image__throttle_8h" local="no">image_throttle.h</includedby>
     <includedby refid="vec2im_8h" local="no">vec2im.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -14,35 +15,19 @@
       </node>
       <node id="0">
         <label>api.h</label>
-        <link refid="api.h"/>
+        <link refid="api_8h"/>
         <childnode refid="1" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="10">
-        <label>image_source_impl.h</label>
-        <link refid="image__source__impl_8h"/>
-      </node>
-      <node id="3">
-        <label>im2vec.h</label>
-        <link refid="im2vec_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>vec2im_impl.h</label>
-        <link refid="vec2im__impl_8h"/>
-      </node>
-      <node id="7">
-        <label>image_sink.h</label>
-        <link refid="image__sink_8h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>image_save_impl.h</label>
         <link refid="image__save__impl_8h"/>
+      </node>
+      <node id="12">
+        <label>image_throttle_impl.h</label>
+        <link refid="image__throttle__impl_8h"/>
       </node>
       <node id="5">
         <label>image_save.h</label>
@@ -50,15 +35,21 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>image_source.h</label>
-        <link refid="image__source_8h"/>
-        <childnode refid="10" relation="include">
+      <node id="3">
+        <label>im2vec.h</label>
+        <link refid="im2vec_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>image_throttle.h</label>
+        <link refid="image__throttle_8h"/>
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>api.h</label>
-        <link refid="api.h"/>
+        <link refid="api_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
@@ -69,20 +60,42 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
-      <node id="4">
-        <label>im2vec_impl.h</label>
-        <link refid="im2vec__impl_8h"/>
+      <node id="10">
+        <label>image_source_impl.h</label>
+        <link refid="image__source__impl_8h"/>
       </node>
-      <node id="11">
+      <node id="9">
+        <label>image_source.h</label>
+        <link refid="image__source_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
         <label>vec2im.h</label>
         <link refid="vec2im_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="8">
         <label>image_sink_impl.h</label>
         <link refid="image__sink__impl_8h"/>
+      </node>
+      <node id="4">
+        <label>im2vec_impl.h</label>
+        <link refid="im2vec__impl_8h"/>
+      </node>
+      <node id="14">
+        <label>vec2im_impl.h</label>
+        <link refid="vec2im__impl_8h"/>
+      </node>
+      <node id="7">
+        <label>image_sink.h</label>
+        <link refid="image__sink_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -95,13 +108,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/api.h" line="30" column="12" bodyfile="/home/matt_darc/.gnuradio/gr-dip/include/dip/api.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/matthew/.gnuradio/gr-dip/include/dip/api.h" line="30" column="12" bodyfile="/home/matthew/.gnuradio/gr-dip/include/dip/api.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/api.h"/>
+    <location file="/home/matthew/.gnuradio/gr-dip/include/dip/api.h"/>
   </compounddef>
 </doxygen>

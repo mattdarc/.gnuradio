@@ -1,42 +1,42 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
-  <compounddef id="vec2im_8h" kind="file">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="vec2im_8h" kind="file" language="C++">
     <compoundname>vec2im.h</compoundname>
     <includes refid="api_8h" local="no">dip/api.h</includes>
-    <includes local="no">gnuradio/sync_block.h</includes>
+    <includes local="no">gnuradio/block.h</includes>
     <includedby refid="vec2im__impl_8h" local="no">vec2im_impl.h</includedby>
     <incdepgraph>
-      <node id="76">
-        <label>gnuradio/sync_block.h</label>
-      </node>
-      <node id="75">
+      <node id="91">
         <label>gnuradio/attributes.h</label>
       </node>
-      <node id="74">
+      <node id="90">
         <label>dip/api.h</label>
         <link refid="api_8h"/>
-        <childnode refid="75" relation="include">
+        <childnode refid="91" relation="include">
         </childnode>
       </node>
-      <node id="73">
+      <node id="92">
+        <label>gnuradio/block.h</label>
+      </node>
+      <node id="89">
         <label>vec2im.h</label>
-        <link refid="vec2im.h"/>
-        <childnode refid="74" relation="include">
+        <link refid="vec2im_8h"/>
+        <childnode refid="90" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
+        <childnode refid="92" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="78">
+      <node id="93">
+        <label>vec2im.h</label>
+        <link refid="vec2im_8h"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
         <label>vec2im_impl.h</label>
         <link refid="vec2im__impl_8h"/>
-      </node>
-      <node id="77">
-        <label>vec2im.h</label>
-        <link refid="vec2im.h"/>
-        <childnode refid="78" relation="include">
-        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classgr_1_1dip_1_1vec2im" prot="public">gr::dip::vec2im</innerclass>
@@ -46,6 +46,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/vec2im.h"/>
+    <location file="/home/matthew/.gnuradio/gr-dip/include/dip/vec2im.h"/>
   </compounddef>
 </doxygen>

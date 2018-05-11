@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
-  <compounddef id="classgr_1_1dip_1_1image__sink" kind="class" prot="public">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classgr_1_1dip_1_1image__sink" kind="class" language="C++" prot="public">
     <compoundname>gr::dip::image_sink</compoundname>
     <basecompoundref prot="public" virt="virtual">block</basecompoundref>
     <derivedcompoundref refid="classgr_1_1dip_1_1image__sink__impl" prot="public" virt="non-virtual">gr::dip::image_sink_impl</derivedcompoundref>
@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/image_sink.h" line="39" column="1" bodyfile="/home/matt_darc/.gnuradio/gr-dip/include/dip/image_sink.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/matthew/.gnuradio/gr-dip/include/dip/image_sink.h" line="39" column="1" bodyfile="/home/matthew/.gnuradio/gr-dip/include/dip/image_sink.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -32,7 +32,7 @@
 <para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1dip_1_1image__sink" kindref="compound">dip::image_sink</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1dip_1_1image__sink_1ae79c72ac03e8942eca4f50cd83ba781a" kindref="member">dip::image_sink::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/image_sink.h" line="49" column="1"/>
+        <location file="/home/matthew/.gnuradio/gr-dip/include/dip/image_sink.h" line="49" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -67,7 +67,7 @@
         <label>gr::block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/matt_darc/.gnuradio/gr-dip/include/dip/image_sink.h" line="37" column="1" bodyfile="/home/matt_darc/.gnuradio/gr-dip/include/dip/image_sink.h" bodystart="36" bodyend="50"/>
+    <location file="/home/matthew/.gnuradio/gr-dip/include/dip/image_sink.h" line="37" column="1" bodyfile="/home/matthew/.gnuradio/gr-dip/include/dip/image_sink.h" bodystart="36" bodyend="50"/>
     <listofallmembers>
       <member refid="classgr_1_1dip_1_1image__sink_1ae79c72ac03e8942eca4f50cd83ba781a" prot="public" virt="non-virtual"><scope>gr::dip::image_sink</scope><name>make</name></member>
       <member refid="classgr_1_1dip_1_1image__sink_1af70a512d91e4a9f7b5e3a1f0534738c2" prot="public" virt="non-virtual"><scope>gr::dip::image_sink</scope><name>sptr</name></member>
