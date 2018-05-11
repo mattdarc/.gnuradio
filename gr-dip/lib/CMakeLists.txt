@@ -28,8 +28,6 @@ list(APPEND dip_sources
     image_source_impl.cc
     image_sink_impl.cc
     image_save_impl.cc
-    im2vec_impl.cc
-    vec2im_impl.cc
     image_throttle_impl.cc )
 
 set(dip_sources "${dip_sources}" PARENT_SCOPE)
