@@ -136,7 +136,7 @@ lib/preinstall:
 lib/CMakeFiles/gnuradio-dip.dir/all:
 	$(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/depend
 	$(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=2,3,4,5,6,7,8 "Built target gnuradio-dip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=13,14,15,16,17 "Built target gnuradio-dip"
 .PHONY : lib/CMakeFiles/gnuradio-dip.dir/all
 
 # Include target in all.
@@ -146,7 +146,7 @@ all: lib/CMakeFiles/gnuradio-dip.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/gnuradio-dip.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/gnuradio-dip.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 0
 .PHONY : lib/CMakeFiles/gnuradio-dip.dir/rule
@@ -173,7 +173,7 @@ clean: lib/CMakeFiles/gnuradio-dip.dir/clean
 lib/CMakeFiles/test-dip.dir/all: lib/CMakeFiles/gnuradio-dip.dir/all
 	$(MAKE) -f lib/CMakeFiles/test-dip.dir/build.make lib/CMakeFiles/test-dip.dir/depend
 	$(MAKE) -f lib/CMakeFiles/test-dip.dir/build.make lib/CMakeFiles/test-dip.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=11,12,13 "Built target test-dip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=22,23,24 "Built target test-dip"
 .PHONY : lib/CMakeFiles/test-dip.dir/all
 
 # Include target in all.
@@ -183,7 +183,7 @@ all: lib/CMakeFiles/test-dip.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/test-dip.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/test-dip.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 0
 .PHONY : lib/CMakeFiles/test-dip.dir/rule
@@ -207,12 +207,21 @@ clean: lib/CMakeFiles/test-dip.dir/clean
 # Directory level rules for directory swig
 
 # Convenience name for "all" pass in the directory.
-swig/all:
+swig/all: swig/CMakeFiles/_dip_swig_swig_tag.dir/all
+swig/all: swig/CMakeFiles/_dip_swig.dir/all
+swig/all: swig/CMakeFiles/_dip_swig_doc_tag.dir/all
+swig/all: swig/CMakeFiles/dip_swig_swig_2d0df.dir/all
+swig/all: swig/CMakeFiles/pygen_swig_2c7ce.dir/all
 
 .PHONY : swig/all
 
 # Convenience name for "clean" pass in the directory.
-swig/clean:
+swig/clean: swig/CMakeFiles/dip_swig_swig_doc.dir/clean
+swig/clean: swig/CMakeFiles/_dip_swig_swig_tag.dir/clean
+swig/clean: swig/CMakeFiles/_dip_swig.dir/clean
+swig/clean: swig/CMakeFiles/_dip_swig_doc_tag.dir/clean
+swig/clean: swig/CMakeFiles/dip_swig_swig_2d0df.dir/clean
+swig/clean: swig/CMakeFiles/pygen_swig_2c7ce.dir/clean
 
 .PHONY : swig/clean
 
@@ -220,6 +229,224 @@ swig/clean:
 swig/preinstall:
 
 .PHONY : swig/preinstall
+
+#=============================================================================
+# Target rules for target swig/CMakeFiles/dip_swig_swig_doc.dir
+
+# All Build rule for target.
+swig/CMakeFiles/dip_swig_swig_doc.dir/all: swig/CMakeFiles/_dip_swig_doc_tag.dir/all
+	$(MAKE) -f swig/CMakeFiles/dip_swig_swig_doc.dir/build.make swig/CMakeFiles/dip_swig_swig_doc.dir/depend
+	$(MAKE) -f swig/CMakeFiles/dip_swig_swig_doc.dir/build.make swig/CMakeFiles/dip_swig_swig_doc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=10,11 "Built target dip_swig_swig_doc"
+.PHONY : swig/CMakeFiles/dip_swig_swig_doc.dir/all
+
+# Build rule for subdir invocation for target.
+swig/CMakeFiles/dip_swig_swig_doc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/dip_swig_swig_doc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 0
+.PHONY : swig/CMakeFiles/dip_swig_swig_doc.dir/rule
+
+# Convenience name for target.
+dip_swig_swig_doc: swig/CMakeFiles/dip_swig_swig_doc.dir/rule
+
+.PHONY : dip_swig_swig_doc
+
+# clean rule for target.
+swig/CMakeFiles/dip_swig_swig_doc.dir/clean:
+	$(MAKE) -f swig/CMakeFiles/dip_swig_swig_doc.dir/build.make swig/CMakeFiles/dip_swig_swig_doc.dir/clean
+.PHONY : swig/CMakeFiles/dip_swig_swig_doc.dir/clean
+
+# clean rule for target.
+clean: swig/CMakeFiles/dip_swig_swig_doc.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target swig/CMakeFiles/_dip_swig_swig_tag.dir
+
+# All Build rule for target.
+swig/CMakeFiles/_dip_swig_swig_tag.dir/all: swig/CMakeFiles/dip_swig_swig_doc.dir/all
+	$(MAKE) -f swig/CMakeFiles/_dip_swig_swig_tag.dir/build.make swig/CMakeFiles/_dip_swig_swig_tag.dir/depend
+	$(MAKE) -f swig/CMakeFiles/_dip_swig_swig_tag.dir/build.make swig/CMakeFiles/_dip_swig_swig_tag.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=5,6 "Built target _dip_swig_swig_tag"
+.PHONY : swig/CMakeFiles/_dip_swig_swig_tag.dir/all
+
+# Include target in all.
+all: swig/CMakeFiles/_dip_swig_swig_tag.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+swig/CMakeFiles/_dip_swig_swig_tag.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/_dip_swig_swig_tag.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 0
+.PHONY : swig/CMakeFiles/_dip_swig_swig_tag.dir/rule
+
+# Convenience name for target.
+_dip_swig_swig_tag: swig/CMakeFiles/_dip_swig_swig_tag.dir/rule
+
+.PHONY : _dip_swig_swig_tag
+
+# clean rule for target.
+swig/CMakeFiles/_dip_swig_swig_tag.dir/clean:
+	$(MAKE) -f swig/CMakeFiles/_dip_swig_swig_tag.dir/build.make swig/CMakeFiles/_dip_swig_swig_tag.dir/clean
+.PHONY : swig/CMakeFiles/_dip_swig_swig_tag.dir/clean
+
+# clean rule for target.
+clean: swig/CMakeFiles/_dip_swig_swig_tag.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target swig/CMakeFiles/_dip_swig.dir
+
+# All Build rule for target.
+swig/CMakeFiles/_dip_swig.dir/all: lib/CMakeFiles/gnuradio-dip.dir/all
+swig/CMakeFiles/_dip_swig.dir/all: swig/CMakeFiles/dip_swig_swig_2d0df.dir/all
+	$(MAKE) -f swig/CMakeFiles/_dip_swig.dir/build.make swig/CMakeFiles/_dip_swig.dir/depend
+	$(MAKE) -f swig/CMakeFiles/_dip_swig.dir/build.make swig/CMakeFiles/_dip_swig.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=1,2 "Built target _dip_swig"
+.PHONY : swig/CMakeFiles/_dip_swig.dir/all
+
+# Include target in all.
+all: swig/CMakeFiles/_dip_swig.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+swig/CMakeFiles/_dip_swig.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 16
+	$(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/_dip_swig.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 0
+.PHONY : swig/CMakeFiles/_dip_swig.dir/rule
+
+# Convenience name for target.
+_dip_swig: swig/CMakeFiles/_dip_swig.dir/rule
+
+.PHONY : _dip_swig
+
+# clean rule for target.
+swig/CMakeFiles/_dip_swig.dir/clean:
+	$(MAKE) -f swig/CMakeFiles/_dip_swig.dir/build.make swig/CMakeFiles/_dip_swig.dir/clean
+.PHONY : swig/CMakeFiles/_dip_swig.dir/clean
+
+# clean rule for target.
+clean: swig/CMakeFiles/_dip_swig.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target swig/CMakeFiles/_dip_swig_doc_tag.dir
+
+# All Build rule for target.
+swig/CMakeFiles/_dip_swig_doc_tag.dir/all:
+	$(MAKE) -f swig/CMakeFiles/_dip_swig_doc_tag.dir/build.make swig/CMakeFiles/_dip_swig_doc_tag.dir/depend
+	$(MAKE) -f swig/CMakeFiles/_dip_swig_doc_tag.dir/build.make swig/CMakeFiles/_dip_swig_doc_tag.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=3,4 "Built target _dip_swig_doc_tag"
+.PHONY : swig/CMakeFiles/_dip_swig_doc_tag.dir/all
+
+# Include target in all.
+all: swig/CMakeFiles/_dip_swig_doc_tag.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+swig/CMakeFiles/_dip_swig_doc_tag.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/_dip_swig_doc_tag.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 0
+.PHONY : swig/CMakeFiles/_dip_swig_doc_tag.dir/rule
+
+# Convenience name for target.
+_dip_swig_doc_tag: swig/CMakeFiles/_dip_swig_doc_tag.dir/rule
+
+.PHONY : _dip_swig_doc_tag
+
+# clean rule for target.
+swig/CMakeFiles/_dip_swig_doc_tag.dir/clean:
+	$(MAKE) -f swig/CMakeFiles/_dip_swig_doc_tag.dir/build.make swig/CMakeFiles/_dip_swig_doc_tag.dir/clean
+.PHONY : swig/CMakeFiles/_dip_swig_doc_tag.dir/clean
+
+# clean rule for target.
+clean: swig/CMakeFiles/_dip_swig_doc_tag.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target swig/CMakeFiles/dip_swig_swig_2d0df.dir
+
+# All Build rule for target.
+swig/CMakeFiles/dip_swig_swig_2d0df.dir/all: swig/CMakeFiles/_dip_swig_swig_tag.dir/all
+	$(MAKE) -f swig/CMakeFiles/dip_swig_swig_2d0df.dir/build.make swig/CMakeFiles/dip_swig_swig_2d0df.dir/depend
+	$(MAKE) -f swig/CMakeFiles/dip_swig_swig_2d0df.dir/build.make swig/CMakeFiles/dip_swig_swig_2d0df.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=7,8,9 "Built target dip_swig_swig_2d0df"
+.PHONY : swig/CMakeFiles/dip_swig_swig_2d0df.dir/all
+
+# Include target in all.
+all: swig/CMakeFiles/dip_swig_swig_2d0df.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+swig/CMakeFiles/dip_swig_swig_2d0df.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/dip_swig_swig_2d0df.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 0
+.PHONY : swig/CMakeFiles/dip_swig_swig_2d0df.dir/rule
+
+# Convenience name for target.
+dip_swig_swig_2d0df: swig/CMakeFiles/dip_swig_swig_2d0df.dir/rule
+
+.PHONY : dip_swig_swig_2d0df
+
+# clean rule for target.
+swig/CMakeFiles/dip_swig_swig_2d0df.dir/clean:
+	$(MAKE) -f swig/CMakeFiles/dip_swig_swig_2d0df.dir/build.make swig/CMakeFiles/dip_swig_swig_2d0df.dir/clean
+.PHONY : swig/CMakeFiles/dip_swig_swig_2d0df.dir/clean
+
+# clean rule for target.
+clean: swig/CMakeFiles/dip_swig_swig_2d0df.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target swig/CMakeFiles/pygen_swig_2c7ce.dir
+
+# All Build rule for target.
+swig/CMakeFiles/pygen_swig_2c7ce.dir/all: swig/CMakeFiles/dip_swig_swig_2d0df.dir/all
+	$(MAKE) -f swig/CMakeFiles/pygen_swig_2c7ce.dir/build.make swig/CMakeFiles/pygen_swig_2c7ce.dir/depend
+	$(MAKE) -f swig/CMakeFiles/pygen_swig_2c7ce.dir/build.make swig/CMakeFiles/pygen_swig_2c7ce.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=20,21 "Built target pygen_swig_2c7ce"
+.PHONY : swig/CMakeFiles/pygen_swig_2c7ce.dir/all
+
+# Include target in all.
+all: swig/CMakeFiles/pygen_swig_2c7ce.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+swig/CMakeFiles/pygen_swig_2c7ce.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/pygen_swig_2c7ce.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/.gnuradio/gr-dip/build/CMakeFiles 0
+.PHONY : swig/CMakeFiles/pygen_swig_2c7ce.dir/rule
+
+# Convenience name for target.
+pygen_swig_2c7ce: swig/CMakeFiles/pygen_swig_2c7ce.dir/rule
+
+.PHONY : pygen_swig_2c7ce
+
+# clean rule for target.
+swig/CMakeFiles/pygen_swig_2c7ce.dir/clean:
+	$(MAKE) -f swig/CMakeFiles/pygen_swig_2c7ce.dir/build.make swig/CMakeFiles/pygen_swig_2c7ce.dir/clean
+.PHONY : swig/CMakeFiles/pygen_swig_2c7ce.dir/clean
+
+# clean rule for target.
+clean: swig/CMakeFiles/pygen_swig_2c7ce.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory python
@@ -246,7 +473,7 @@ python/preinstall:
 python/CMakeFiles/pygen_python_61ed4.dir/all:
 	$(MAKE) -f python/CMakeFiles/pygen_python_61ed4.dir/build.make python/CMakeFiles/pygen_python_61ed4.dir/depend
 	$(MAKE) -f python/CMakeFiles/pygen_python_61ed4.dir/build.make python/CMakeFiles/pygen_python_61ed4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=9,10 "Built target pygen_python_61ed4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=18,19 "Built target pygen_python_61ed4"
 .PHONY : python/CMakeFiles/pygen_python_61ed4.dir/all
 
 # Include target in all.
@@ -392,7 +619,7 @@ docs/doxygen/preinstall:
 docs/doxygen/CMakeFiles/doxygen_target.dir/all:
 	$(MAKE) -f docs/doxygen/CMakeFiles/doxygen_target.dir/build.make docs/doxygen/CMakeFiles/doxygen_target.dir/depend
 	$(MAKE) -f docs/doxygen/CMakeFiles/doxygen_target.dir/build.make docs/doxygen/CMakeFiles/doxygen_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=1 "Built target doxygen_target"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=12 "Built target doxygen_target"
 .PHONY : docs/doxygen/CMakeFiles/doxygen_target.dir/all
 
 # Include target in all.

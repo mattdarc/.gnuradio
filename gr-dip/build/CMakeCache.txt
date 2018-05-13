@@ -259,8 +259,11 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2
 
+//Path to a file.
+PYTHON_INCLUDE_DIR:PATH=/usr/include/python2.7
+
 //Path to a library.
-PYTHON_LIBRARY:FILEPATH=PYTHON_LIBRARY-NOTFOUND
+PYTHON_LIBRARY:FILEPATH=/usr/lib64/libpython2.7.so
 
 //Path to a library.
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
@@ -282,6 +285,9 @@ SWIG_EXECUTABLE:FILEPATH=/usr/bin/swig
 
 //Swig version
 SWIG_VERSION:STRING=3.0.12
+
+//Dependencies for the target
+_dip_swig_LIB_DEPENDS:STATIC=general;/usr/lib64/libpython2.7.so;general;gnuradio-dip;
 
 //Dependencies for the target
 gnuradio-dip_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_face;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;/usr/lib64/libboost_filesystem.so;general;/usr/lib64/libboost_system.so;general;/usr/lib64/libgnuradio-runtime.so;general;/usr/lib64/libgnuradio-pmt.so;general;/usr/lib64/libgnuradio-blocks.so;
@@ -474,6 +480,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v3.3.1()]
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.2()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.14(2)]
+//Details about finding PythonLibs
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib64/libpython2.7.so][/usr/include/python2.7][v2.7.14(2)]
 //Details about finding SWIG
 FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[/usr/bin/swig][/usr/share/swig/3.0.12][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -484,6 +492,18 @@ GNURADIO_BLOCKS_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 GNURADIO_RUNTIME_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 GR_DIP_INCLUDE_DIRS:INTERNAL=/home/matthew/.gnuradio/gr-dip/include
 GR_DIP_SWIG_INCLUDE_DIRS:INTERNAL=/home/matthew/.gnuradio/gr-dip/swig
+//Result of TRY_COMPILE
+HAVE_SIZEOF_SIZE_T:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_UINT:INTERNAL=TRUE
+//Have include stddef.h
+HAVE_STDDEF_H:INTERNAL=1
+//Have include stdint.h
+HAVE_STDINT_H:INTERNAL=1
+//Have include sys/types.h
+HAVE_SYS_TYPES_H:INTERNAL=1
+//Test HAVE_WNO_UNUSED_BUT_SET_VARIABLE
+HAVE_WNO_UNUSED_BUT_SET_VARIABLE:INTERNAL=1
 PC_CPPUNIT_CFLAGS:INTERNAL=
 PC_CPPUNIT_CFLAGS_I:INTERNAL=
 PC_CPPUNIT_CFLAGS_OTHER:INTERNAL=
@@ -590,12 +610,18 @@ PC_GNURADIO_RUNTIME_gnuradio-runtime_VERSION:INTERNAL=
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_INCLUDE_DIR
+PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_LIBRARY
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
 PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_LIBRARY_RELEASE
 PYTHON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//CHECK_TYPE_SIZE: sizeof(size_t)
+SIZEOF_SIZE_T:INTERNAL=8
+//CHECK_TYPE_SIZE: sizeof(unsigned int)
+SIZEOF_UINT:INTERNAL=4
 //ADVANCED property for variable: SWIG_DIR
 SWIG_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SWIG_EXECUTABLE

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<block>
+  <name>Gaussian Filter</name>
+  <key>filters_gaussian</key>
+  <category>[Image Processing]/Filters</category>
+  <import>import filters</import>
+  <make>filters.gaussian($sigma, $n)</make>
+  <callback>set_sigma($sigma)</callback>
+  <callback>set_n($n)</callback>
+
+  <param>
+    <name>sigma</name>
+    <key>sigma</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Dimension</name>
+    <key>n</key>
+    <type>real</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

@@ -134,6 +134,7 @@ endif(APPLE)
 ########################################################################
 find_package(CppUnit)
 find_package(Doxygen)
+find_package(OpenCV REQUIRED) # Added by me
 find_package(Armadillo)
 
 # Search for GNU Radio and its components and versions. Add any
@@ -166,6 +167,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_BINARY_DIR}/lib
     ${CMAKE_BINARY_DIR}/include
+    ${OpenCV_INCLUDE_DIRS} # added by me
     ${Boost_INCLUDE_DIRS}
     ${CPPUNIT_INCLUDE_DIRS}
     ${GNURADIO_ALL_INCLUDE_DIRS}
@@ -173,6 +175,7 @@ include_directories(
 )
 
 link_directories(
+    ${OpenCV_LIBRARY_DIRS} # added by me
     ${Boost_LIBRARY_DIRS}
     ${CPPUNIT_LIBRARY_DIRS}
     ${GNURADIO_RUNTIME_LIBRARY_DIRS}

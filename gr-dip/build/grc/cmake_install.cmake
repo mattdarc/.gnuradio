@@ -42,8 +42,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/matthew/.gnuradio/gr-dip/grc/dip_image_source.xml"
     "/home/matthew/.gnuradio/gr-dip/grc/dip_image_sink.xml"
     "/home/matthew/.gnuradio/gr-dip/grc/dip_image_save.xml"
-    "/home/matthew/.gnuradio/gr-dip/grc/dip_im2vec.xml"
-    "/home/matthew/.gnuradio/gr-dip/grc/dip_vec2im.xml"
     "/home/matthew/.gnuradio/gr-dip/grc/dip_image_throttle.xml"
     )
 endif()

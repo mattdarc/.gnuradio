@@ -129,57 +129,9 @@ lib/CMakeFiles/gnuradio-dip.dir/image_save_impl.cc.o.provides: lib/CMakeFiles/gn
 lib/CMakeFiles/gnuradio-dip.dir/image_save_impl.cc.o.provides.build: lib/CMakeFiles/gnuradio-dip.dir/image_save_impl.cc.o
 
 
-lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o: lib/CMakeFiles/gnuradio-dip.dir/flags.make
-lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o: ../lib/im2vec_impl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o"
-	cd /home/matthew/.gnuradio/gr-dip/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o -c /home/matthew/.gnuradio/gr-dip/lib/im2vec_impl.cc
-
-lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.i"
-	cd /home/matthew/.gnuradio/gr-dip/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matthew/.gnuradio/gr-dip/lib/im2vec_impl.cc > CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.i
-
-lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.s"
-	cd /home/matthew/.gnuradio/gr-dip/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matthew/.gnuradio/gr-dip/lib/im2vec_impl.cc -o CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.s
-
-lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o.requires:
-
-.PHONY : lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o.requires
-
-lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o.provides: lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o.requires
-	$(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o.provides.build
-.PHONY : lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o.provides
-
-lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o.provides.build: lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o
-
-
-lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o: lib/CMakeFiles/gnuradio-dip.dir/flags.make
-lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o: ../lib/vec2im_impl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o"
-	cd /home/matthew/.gnuradio/gr-dip/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o -c /home/matthew/.gnuradio/gr-dip/lib/vec2im_impl.cc
-
-lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.i"
-	cd /home/matthew/.gnuradio/gr-dip/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matthew/.gnuradio/gr-dip/lib/vec2im_impl.cc > CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.i
-
-lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.s"
-	cd /home/matthew/.gnuradio/gr-dip/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matthew/.gnuradio/gr-dip/lib/vec2im_impl.cc -o CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.s
-
-lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o.requires:
-
-.PHONY : lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o.requires
-
-lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o.provides: lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o.requires
-	$(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o.provides.build
-.PHONY : lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o.provides
-
-lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o.provides.build: lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o
-
-
 lib/CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.o: lib/CMakeFiles/gnuradio-dip.dir/flags.make
 lib/CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.o: ../lib/image_throttle_impl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.o"
 	cd /home/matthew/.gnuradio/gr-dip/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.o -c /home/matthew/.gnuradio/gr-dip/lib/image_throttle_impl.cc
 
 lib/CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.i: cmake_force
@@ -206,8 +158,6 @@ gnuradio__dip_OBJECTS = \
 "CMakeFiles/gnuradio-dip.dir/image_source_impl.cc.o" \
 "CMakeFiles/gnuradio-dip.dir/image_sink_impl.cc.o" \
 "CMakeFiles/gnuradio-dip.dir/image_save_impl.cc.o" \
-"CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o" \
-"CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o" \
 "CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.o"
 
 # External object files for target gnuradio-dip
@@ -216,8 +166,6 @@ gnuradio__dip_EXTERNAL_OBJECTS =
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-dip.dir/image_source_impl.cc.o
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-dip.dir/image_sink_impl.cc.o
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-dip.dir/image_save_impl.cc.o
-lib/libgnuradio-dip-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o
-lib/libgnuradio-dip-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.o
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-dip.dir/build.make
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: /usr/lib64/libopencv_dnn.so.3.3.1
@@ -244,7 +192,7 @@ lib/libgnuradio-dip-1.0.0git.so.0.0.0: /usr/lib64/libopencv_imgcodecs.so.3.3.1
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: /usr/lib64/libopencv_imgproc.so.3.3.1
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: /usr/lib64/libopencv_core.so.3.3.1
 lib/libgnuradio-dip-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-dip.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libgnuradio-dip-1.0.0git.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matthew/.gnuradio/gr-dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libgnuradio-dip-1.0.0git.so"
 	cd /home/matthew/.gnuradio/gr-dip/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-dip.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/matthew/.gnuradio/gr-dip/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-dip-1.0.0git.so.0.0.0 libgnuradio-dip-1.0.0git.so.0.0.0 libgnuradio-dip-1.0.0git.so
 	cd /home/matthew/.gnuradio/gr-dip/build/lib && /usr/bin/cmake -E create_symlink libgnuradio-dip-1.0.0git.so.0.0.0 /home/matthew/.gnuradio/gr-dip/build/lib/libgnuradio-dip.so
@@ -262,8 +210,6 @@ lib/CMakeFiles/gnuradio-dip.dir/build: lib/libgnuradio-dip-1.0.0git.so
 lib/CMakeFiles/gnuradio-dip.dir/requires: lib/CMakeFiles/gnuradio-dip.dir/image_source_impl.cc.o.requires
 lib/CMakeFiles/gnuradio-dip.dir/requires: lib/CMakeFiles/gnuradio-dip.dir/image_sink_impl.cc.o.requires
 lib/CMakeFiles/gnuradio-dip.dir/requires: lib/CMakeFiles/gnuradio-dip.dir/image_save_impl.cc.o.requires
-lib/CMakeFiles/gnuradio-dip.dir/requires: lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o.requires
-lib/CMakeFiles/gnuradio-dip.dir/requires: lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o.requires
 lib/CMakeFiles/gnuradio-dip.dir/requires: lib/CMakeFiles/gnuradio-dip.dir/image_throttle_impl.cc.o.requires
 
 .PHONY : lib/CMakeFiles/gnuradio-dip.dir/requires

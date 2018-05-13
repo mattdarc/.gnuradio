@@ -197,33 +197,6 @@ test-dip/fast:
 	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f lib/CMakeFiles/test-dip.dir/build.make lib/CMakeFiles/test-dip.dir/build
 .PHONY : test-dip/fast
 
-im2vec_impl.o: im2vec_impl.cc.o
-
-.PHONY : im2vec_impl.o
-
-# target to build an object file
-im2vec_impl.cc.o:
-	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.o
-.PHONY : im2vec_impl.cc.o
-
-im2vec_impl.i: im2vec_impl.cc.i
-
-.PHONY : im2vec_impl.i
-
-# target to preprocess a source file
-im2vec_impl.cc.i:
-	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.i
-.PHONY : im2vec_impl.cc.i
-
-im2vec_impl.s: im2vec_impl.cc.s
-
-.PHONY : im2vec_impl.s
-
-# target to generate assembly for a file
-im2vec_impl.cc.s:
-	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/im2vec_impl.cc.s
-.PHONY : im2vec_impl.cc.s
-
 image_save_impl.o: image_save_impl.cc.o
 
 .PHONY : image_save_impl.o
@@ -386,33 +359,6 @@ test_dip.cc.s:
 	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f lib/CMakeFiles/test-dip.dir/build.make lib/CMakeFiles/test-dip.dir/test_dip.cc.s
 .PHONY : test_dip.cc.s
 
-vec2im_impl.o: vec2im_impl.cc.o
-
-.PHONY : vec2im_impl.o
-
-# target to build an object file
-vec2im_impl.cc.o:
-	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.o
-.PHONY : vec2im_impl.cc.o
-
-vec2im_impl.i: vec2im_impl.cc.i
-
-.PHONY : vec2im_impl.i
-
-# target to preprocess a source file
-vec2im_impl.cc.i:
-	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.i
-.PHONY : vec2im_impl.cc.i
-
-vec2im_impl.s: vec2im_impl.cc.s
-
-.PHONY : vec2im_impl.s
-
-# target to generate assembly for a file
-vec2im_impl.cc.s:
-	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f lib/CMakeFiles/gnuradio-dip.dir/build.make lib/CMakeFiles/gnuradio-dip.dir/vec2im_impl.cc.s
-.PHONY : vec2im_impl.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -428,9 +374,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... test-dip"
 	@echo "... rebuild_cache"
-	@echo "... im2vec_impl.o"
-	@echo "... im2vec_impl.i"
-	@echo "... im2vec_impl.s"
 	@echo "... image_save_impl.o"
 	@echo "... image_save_impl.i"
 	@echo "... image_save_impl.s"
@@ -449,9 +392,6 @@ help:
 	@echo "... test_dip.o"
 	@echo "... test_dip.i"
 	@echo "... test_dip.s"
-	@echo "... vec2im_impl.o"
-	@echo "... vec2im_impl.i"
-	@echo "... vec2im_impl.s"
 .PHONY : help
 
 

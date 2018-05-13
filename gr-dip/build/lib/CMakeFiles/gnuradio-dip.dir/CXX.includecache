@@ -10,12 +10,6 @@
 gnuradio/attributes.h
 -
 
-../include/dip/im2vec.h
-dip/api.h
--
-gnuradio/block.h
--
-
 ../include/dip/image_save.h
 dip/api.h
 -
@@ -38,28 +32,6 @@ gnuradio/block.h
 dip/api.h
 -
 gnuradio/sync_block.h
--
-
-../include/dip/vec2im.h
-dip/api.h
--
-gnuradio/block.h
--
-
-/home/matthew/.gnuradio/gr-dip/lib/im2vec_impl.cc
-config.h
-/home/matthew/.gnuradio/gr-dip/lib/config.h
-gnuradio/io_signature.h
--
-im2vec_impl.h
-/home/matthew/.gnuradio/gr-dip/lib/im2vec_impl.h
-
-/home/matthew/.gnuradio/gr-dip/lib/im2vec_impl.h
-dip/im2vec.h
--
-opencv2/core/core.hpp
--
-opencv2/highgui/highgui.hpp
 -
 
 /home/matthew/.gnuradio/gr-dip/lib/image_save_impl.cc
@@ -126,22 +98,6 @@ limits
 
 /home/matthew/.gnuradio/gr-dip/lib/image_throttle_impl.h
 dip/image_throttle.h
--
-opencv2/core/core.hpp
--
-opencv2/highgui/highgui.hpp
--
-
-/home/matthew/.gnuradio/gr-dip/lib/vec2im_impl.cc
-config.h
-/home/matthew/.gnuradio/gr-dip/lib/config.h
-gnuradio/io_signature.h
--
-vec2im_impl.h
-/home/matthew/.gnuradio/gr-dip/lib/vec2im_impl.h
-
-/home/matthew/.gnuradio/gr-dip/lib/vec2im_impl.h
-dip/vec2im.h
 -
 opencv2/core/core.hpp
 -

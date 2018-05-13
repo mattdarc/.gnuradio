@@ -20,7 +20,5 @@ install(FILES
     dip_image_source.xml
     dip_image_sink.xml
     dip_image_save.xml
-    dip_im2vec.xml
-    dip_vec2im.xml
     dip_image_throttle.xml DESTINATION share/gnuradio/grc/blocks
 )

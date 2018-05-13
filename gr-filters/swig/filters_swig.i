@@ -8,5 +8,8 @@
 %include "filters_swig_doc.i"
 
 %{
+#include "filters/gaussian.h"
 %}
 
+%include "filters/gaussian.h"
+GR_SWIG_BLOCK_MAGIC2(filters, gaussian);

@@ -22,5 +22,5 @@
 ########################################################################
 install(FILES
     api.h
-    DESTINATION include/filters
+    gaussian.h DESTINATION include/filters
 )

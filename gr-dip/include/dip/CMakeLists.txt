@@ -25,7 +25,5 @@ install(FILES
     image_source.h
     image_sink.h
     image_save.h
-    im2vec.h
-    vec2im.h
     image_throttle.h DESTINATION include/dip
 )

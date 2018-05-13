@@ -68,17 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"dip_runtime\""
@@ -89,16 +78,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : test/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -112,16 +101,16 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target test
+test/fast: test
 
-.PHONY : rebuild_cache/fast
+.PHONY : test/fast
 
 # Special rule for the target install
 install: preinstall
@@ -134,6 +123,17 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -167,6 +167,204 @@ depend:
 	cd /home/matthew/.gnuradio/gr-dip/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+swig/CMakeFiles/dip_swig_swig_doc.dir/rule:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/dip_swig_swig_doc.dir/rule
+.PHONY : swig/CMakeFiles/dip_swig_swig_doc.dir/rule
+
+# Convenience name for target.
+dip_swig_swig_doc: swig/CMakeFiles/dip_swig_swig_doc.dir/rule
+
+.PHONY : dip_swig_swig_doc
+
+# fast build rule for target.
+dip_swig_swig_doc/fast:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/dip_swig_swig_doc.dir/build.make swig/CMakeFiles/dip_swig_swig_doc.dir/build
+.PHONY : dip_swig_swig_doc/fast
+
+# Convenience name for target.
+swig/CMakeFiles/_dip_swig_swig_tag.dir/rule:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/_dip_swig_swig_tag.dir/rule
+.PHONY : swig/CMakeFiles/_dip_swig_swig_tag.dir/rule
+
+# Convenience name for target.
+_dip_swig_swig_tag: swig/CMakeFiles/_dip_swig_swig_tag.dir/rule
+
+.PHONY : _dip_swig_swig_tag
+
+# fast build rule for target.
+_dip_swig_swig_tag/fast:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig_swig_tag.dir/build.make swig/CMakeFiles/_dip_swig_swig_tag.dir/build
+.PHONY : _dip_swig_swig_tag/fast
+
+# Convenience name for target.
+swig/CMakeFiles/_dip_swig.dir/rule:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/_dip_swig.dir/rule
+.PHONY : swig/CMakeFiles/_dip_swig.dir/rule
+
+# Convenience name for target.
+_dip_swig: swig/CMakeFiles/_dip_swig.dir/rule
+
+.PHONY : _dip_swig
+
+# fast build rule for target.
+_dip_swig/fast:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig.dir/build.make swig/CMakeFiles/_dip_swig.dir/build
+.PHONY : _dip_swig/fast
+
+# Convenience name for target.
+swig/CMakeFiles/_dip_swig_doc_tag.dir/rule:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/_dip_swig_doc_tag.dir/rule
+.PHONY : swig/CMakeFiles/_dip_swig_doc_tag.dir/rule
+
+# Convenience name for target.
+_dip_swig_doc_tag: swig/CMakeFiles/_dip_swig_doc_tag.dir/rule
+
+.PHONY : _dip_swig_doc_tag
+
+# fast build rule for target.
+_dip_swig_doc_tag/fast:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig_doc_tag.dir/build.make swig/CMakeFiles/_dip_swig_doc_tag.dir/build
+.PHONY : _dip_swig_doc_tag/fast
+
+# Convenience name for target.
+swig/CMakeFiles/dip_swig_swig_2d0df.dir/rule:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/dip_swig_swig_2d0df.dir/rule
+.PHONY : swig/CMakeFiles/dip_swig_swig_2d0df.dir/rule
+
+# Convenience name for target.
+dip_swig_swig_2d0df: swig/CMakeFiles/dip_swig_swig_2d0df.dir/rule
+
+.PHONY : dip_swig_swig_2d0df
+
+# fast build rule for target.
+dip_swig_swig_2d0df/fast:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/dip_swig_swig_2d0df.dir/build.make swig/CMakeFiles/dip_swig_swig_2d0df.dir/build
+.PHONY : dip_swig_swig_2d0df/fast
+
+# Convenience name for target.
+swig/CMakeFiles/pygen_swig_2c7ce.dir/rule:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f CMakeFiles/Makefile2 swig/CMakeFiles/pygen_swig_2c7ce.dir/rule
+.PHONY : swig/CMakeFiles/pygen_swig_2c7ce.dir/rule
+
+# Convenience name for target.
+pygen_swig_2c7ce: swig/CMakeFiles/pygen_swig_2c7ce.dir/rule
+
+.PHONY : pygen_swig_2c7ce
+
+# fast build rule for target.
+pygen_swig_2c7ce/fast:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/pygen_swig_2c7ce.dir/build.make swig/CMakeFiles/pygen_swig_2c7ce.dir/build
+.PHONY : pygen_swig_2c7ce/fast
+
+_dip_swig_doc_tag.o: _dip_swig_doc_tag.cpp.o
+
+.PHONY : _dip_swig_doc_tag.o
+
+# target to build an object file
+_dip_swig_doc_tag.cpp.o:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig_doc_tag.dir/build.make swig/CMakeFiles/_dip_swig_doc_tag.dir/_dip_swig_doc_tag.cpp.o
+.PHONY : _dip_swig_doc_tag.cpp.o
+
+_dip_swig_doc_tag.i: _dip_swig_doc_tag.cpp.i
+
+.PHONY : _dip_swig_doc_tag.i
+
+# target to preprocess a source file
+_dip_swig_doc_tag.cpp.i:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig_doc_tag.dir/build.make swig/CMakeFiles/_dip_swig_doc_tag.dir/_dip_swig_doc_tag.cpp.i
+.PHONY : _dip_swig_doc_tag.cpp.i
+
+_dip_swig_doc_tag.s: _dip_swig_doc_tag.cpp.s
+
+.PHONY : _dip_swig_doc_tag.s
+
+# target to generate assembly for a file
+_dip_swig_doc_tag.cpp.s:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig_doc_tag.dir/build.make swig/CMakeFiles/_dip_swig_doc_tag.dir/_dip_swig_doc_tag.cpp.s
+.PHONY : _dip_swig_doc_tag.cpp.s
+
+_dip_swig_swig_tag.o: _dip_swig_swig_tag.cpp.o
+
+.PHONY : _dip_swig_swig_tag.o
+
+# target to build an object file
+_dip_swig_swig_tag.cpp.o:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig_swig_tag.dir/build.make swig/CMakeFiles/_dip_swig_swig_tag.dir/_dip_swig_swig_tag.cpp.o
+.PHONY : _dip_swig_swig_tag.cpp.o
+
+_dip_swig_swig_tag.i: _dip_swig_swig_tag.cpp.i
+
+.PHONY : _dip_swig_swig_tag.i
+
+# target to preprocess a source file
+_dip_swig_swig_tag.cpp.i:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig_swig_tag.dir/build.make swig/CMakeFiles/_dip_swig_swig_tag.dir/_dip_swig_swig_tag.cpp.i
+.PHONY : _dip_swig_swig_tag.cpp.i
+
+_dip_swig_swig_tag.s: _dip_swig_swig_tag.cpp.s
+
+.PHONY : _dip_swig_swig_tag.s
+
+# target to generate assembly for a file
+_dip_swig_swig_tag.cpp.s:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig_swig_tag.dir/build.make swig/CMakeFiles/_dip_swig_swig_tag.dir/_dip_swig_swig_tag.cpp.s
+.PHONY : _dip_swig_swig_tag.cpp.s
+
+dip_swigPYTHON_wrap.o: dip_swigPYTHON_wrap.cxx.o
+
+.PHONY : dip_swigPYTHON_wrap.o
+
+# target to build an object file
+dip_swigPYTHON_wrap.cxx.o:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig.dir/build.make swig/CMakeFiles/_dip_swig.dir/dip_swigPYTHON_wrap.cxx.o
+.PHONY : dip_swigPYTHON_wrap.cxx.o
+
+dip_swigPYTHON_wrap.i: dip_swigPYTHON_wrap.cxx.i
+
+.PHONY : dip_swigPYTHON_wrap.i
+
+# target to preprocess a source file
+dip_swigPYTHON_wrap.cxx.i:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig.dir/build.make swig/CMakeFiles/_dip_swig.dir/dip_swigPYTHON_wrap.cxx.i
+.PHONY : dip_swigPYTHON_wrap.cxx.i
+
+dip_swigPYTHON_wrap.s: dip_swigPYTHON_wrap.cxx.s
+
+.PHONY : dip_swigPYTHON_wrap.s
+
+# target to generate assembly for a file
+dip_swigPYTHON_wrap.cxx.s:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/_dip_swig.dir/build.make swig/CMakeFiles/_dip_swig.dir/dip_swigPYTHON_wrap.cxx.s
+.PHONY : dip_swigPYTHON_wrap.cxx.s
+
+dip_swig_swig_2d0df.o: dip_swig_swig_2d0df.cpp.o
+
+.PHONY : dip_swig_swig_2d0df.o
+
+# target to build an object file
+dip_swig_swig_2d0df.cpp.o:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/dip_swig_swig_2d0df.dir/build.make swig/CMakeFiles/dip_swig_swig_2d0df.dir/dip_swig_swig_2d0df.cpp.o
+.PHONY : dip_swig_swig_2d0df.cpp.o
+
+dip_swig_swig_2d0df.i: dip_swig_swig_2d0df.cpp.i
+
+.PHONY : dip_swig_swig_2d0df.i
+
+# target to preprocess a source file
+dip_swig_swig_2d0df.cpp.i:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/dip_swig_swig_2d0df.dir/build.make swig/CMakeFiles/dip_swig_swig_2d0df.dir/dip_swig_swig_2d0df.cpp.i
+.PHONY : dip_swig_swig_2d0df.cpp.i
+
+dip_swig_swig_2d0df.s: dip_swig_swig_2d0df.cpp.s
+
+.PHONY : dip_swig_swig_2d0df.s
+
+# target to generate assembly for a file
+dip_swig_swig_2d0df.cpp.s:
+	cd /home/matthew/.gnuradio/gr-dip/build && $(MAKE) -f swig/CMakeFiles/dip_swig_swig_2d0df.dir/build.make swig/CMakeFiles/dip_swig_swig_2d0df.dir/dip_swig_swig_2d0df.cpp.s
+.PHONY : dip_swig_swig_2d0df.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,12 +372,30 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
 	@echo "... list_install_components"
-	@echo "... test"
+	@echo "... edit_cache"
 	@echo "... install/local"
-	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... dip_swig_swig_doc"
+	@echo "... _dip_swig_swig_tag"
 	@echo "... install"
+	@echo "... _dip_swig"
+	@echo "... _dip_swig_doc_tag"
+	@echo "... dip_swig_swig_2d0df"
+	@echo "... rebuild_cache"
+	@echo "... pygen_swig_2c7ce"
+	@echo "... _dip_swig_doc_tag.o"
+	@echo "... _dip_swig_doc_tag.i"
+	@echo "... _dip_swig_doc_tag.s"
+	@echo "... _dip_swig_swig_tag.o"
+	@echo "... _dip_swig_swig_tag.i"
+	@echo "... _dip_swig_swig_tag.s"
+	@echo "... dip_swigPYTHON_wrap.o"
+	@echo "... dip_swigPYTHON_wrap.i"
+	@echo "... dip_swigPYTHON_wrap.s"
+	@echo "... dip_swig_swig_2d0df.o"
+	@echo "... dip_swig_swig_2d0df.i"
+	@echo "... dip_swig_swig_2d0df.s"
 .PHONY : help
 
 

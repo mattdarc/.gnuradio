@@ -29,7 +29,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 include_directories(${ARMADILLO_INCLUDE_DIR})
 link_directories(${ARMADILLO_LIBRARY_DIRS})
 list(APPEND filters_sources
-    )
+    gaussian_impl.cc )
 
 set(filters_sources "${filters_sources}" PARENT_SCOPE)
 if(NOT filters_sources)
@@ -38,7 +38,11 @@ if(NOT filters_sources)
 endif(NOT filters_sources)
 
 add_library(gnuradio-filters SHARED ${filters_sources})
-target_link_libraries(gnuradio-filters ${Boost_LIBRARIES} ${GNURADIO_ALL_LIBRARIES})
+target_link_libraries(gnuradio-filters
+  ${Boost_LIBRARIES}
+  ${GNURADIO_ALL_LIBRARIES}
+  ${OpenCV_LIBS} # added by me
+  )
 set_target_properties(gnuradio-filters PROPERTIES DEFINE_SYMBOL "gnuradio_filters_EXPORTS")
 
 if(APPLE)
@@ -58,7 +62,9 @@ GR_LIBRARY_FOO(gnuradio-filters RUNTIME_COMPONENT "filters_runtime" DEVEL_COMPON
 ########################################################################
 include(GrTest)
 
-include_directories(${CPPUNIT_INCLUDE_DIRS})
+include_directories(
+  ${OpenCV_INCLUDE_DIRS}
+  ${CPPUNIT_INCLUDE_DIRS})
 
 list(APPEND test_filters_sources
     ${CMAKE_CURRENT_SOURCE_DIR}/test_filters.cc
@@ -69,6 +75,8 @@ add_executable(test-filters ${test_filters_sources})
 
 target_link_libraries(
   test-filters
+  ${OpenCV_LIBS} # added by me
+  ${GNURADIO_BLOCKS_LIBRARIES} # added by me
   ${GNURADIO_RUNTIME_LIBRARIES}
   ${Boost_LIBRARIES}
   ${CPPUNIT_LIBRARIES}
@@ -83,4 +91,3 @@ GR_ADD_TEST(test_filters test-filters)
 ########################################################################
 message(STATUS "Using install prefix: ${CMAKE_INSTALL_PREFIX}")
 message(STATUS "Building for version: ${VERSION} / ${LIBVER}")
-

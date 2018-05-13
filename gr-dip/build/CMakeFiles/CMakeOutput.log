@@ -607,3 +607,88 @@ gmake[1]: Leaving directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMa
     Feature record: C_FEATURE:0c_restrict
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_fcd79/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_fcd79.dir/build.make CMakeFiles/cmTC_fcd79.dir/build
+gmake[1]: Entering directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fcd79.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_fcd79.dir/CheckIncludeFile.c.o   -c /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_fcd79
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fcd79.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_fcd79.dir/CheckIncludeFile.c.o  -o cmTC_fcd79 
+gmake[1]: Leaving directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_85ec4/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_85ec4.dir/build.make CMakeFiles/cmTC_85ec4.dir/build
+gmake[1]: Entering directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85ec4.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_85ec4.dir/CheckIncludeFile.c.o   -c /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_85ec4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85ec4.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_85ec4.dir/CheckIncludeFile.c.o  -o cmTC_85ec4 
+gmake[1]: Leaving directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_53515/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_53515.dir/build.make CMakeFiles/cmTC_53515.dir/build
+gmake[1]: Entering directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53515.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_53515.dir/CheckIncludeFile.c.o   -c /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_53515
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53515.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_53515.dir/CheckIncludeFile.c.o  -o cmTC_53515 
+gmake[1]: Leaving directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_9594b/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9594b.dir/build.make CMakeFiles/cmTC_9594b.dir/build
+gmake[1]: Entering directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9594b.dir/SIZEOF_SIZE_T.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9594b.dir/SIZEOF_SIZE_T.c.o   -c /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CheckTypeSize/SIZEOF_SIZE_T.c
+Linking C executable cmTC_9594b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9594b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9594b.dir/SIZEOF_SIZE_T.c.o  -o cmTC_9594b 
+gmake[1]: Leaving directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_6e429/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_6e429.dir/build.make CMakeFiles/cmTC_6e429.dir/build
+gmake[1]: Entering directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6e429.dir/SIZEOF_UINT.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_6e429.dir/SIZEOF_UINT.c.o   -c /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CheckTypeSize/SIZEOF_UINT.c
+Linking C executable cmTC_6e429
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e429.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_6e429.dir/SIZEOF_UINT.c.o  -o cmTC_6e429 
+gmake[1]: Leaving directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test HAVE_WNO_UNUSED_BUT_SET_VARIABLE succeeded with the following output:
+Change Dir: /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e664a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e664a.dir/build.make CMakeFiles/cmTC_e664a.dir/build
+gmake[1]: Entering directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e664a.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_WNO_UNUSED_BUT_SET_VARIABLE   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_e664a.dir/src.cxx.o -c /home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e664a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e664a.dir/link.txt --verbose=1
+/usr/bin/c++   -DHAVE_WNO_UNUSED_BUT_SET_VARIABLE    -rdynamic CMakeFiles/cmTC_e664a.dir/src.cxx.o  -o cmTC_e664a 
+gmake[1]: Leaving directory '/home/matthew/.gnuradio/gr-dip/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
