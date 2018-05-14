@@ -6,12 +6,12 @@
     <category>[Image Processing]/Core</category>
     <import>import dip</import>
     <make>dip.image_source($file)</make>
-    <param>
+  <param>
 	<name>Image File</name>
 	<key>file</key>
 	<value></value>
 	<type>file_open</type>
-    </param> 	 
+    </param>
     <source>
 	<name>out</name>
 	<type>float</type>

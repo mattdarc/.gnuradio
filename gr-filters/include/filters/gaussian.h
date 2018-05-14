@@ -46,7 +46,7 @@ namespace gr {
        * class. filters::gaussian::make is the public interface for
        * creating new instances.
        */
-      static sptr make(float sigma, size_t n);
+      static sptr make(float sigma, int n);
     };
 
   } // namespace filters

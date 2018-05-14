@@ -38,7 +38,7 @@ namespace gr {
       bool d_sent;
 
      public:
-      gaussian_impl(float sigma, size_t n);
+      gaussian_impl(float sigma, int n);
       ~gaussian_impl();
 
       // Where all the action really happens

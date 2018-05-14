@@ -39,9 +39,9 @@ endif(NOT filters_sources)
 
 add_library(gnuradio-filters SHARED ${filters_sources})
 target_link_libraries(gnuradio-filters
-  ${Boost_LIBRARIES}
-  ${GNURADIO_ALL_LIBRARIES}
   ${OpenCV_LIBS} # added by me
+  ${Boost_LIBRARIES}
+  ${filters_libs}
   )
 set_target_properties(gnuradio-filters PROPERTIES DEFINE_SYMBOL "gnuradio_filters_EXPORTS")
 
@@ -76,8 +76,8 @@ add_executable(test-filters ${test_filters_sources})
 target_link_libraries(
   test-filters
   ${OpenCV_LIBS} # added by me
-  ${GNURADIO_BLOCKS_LIBRARIES} # added by me
   ${GNURADIO_RUNTIME_LIBRARIES}
+  ${GNURADIO_BLOCKS_LIBRARIES} # added by me
   ${Boost_LIBRARIES}
   ${CPPUNIT_LIBRARIES}
   ${ARMADILLO_LIBRARIES}

@@ -10,15 +10,17 @@
   <callback>set_n($n)</callback>
 
   <param>
-    <name>sigma</name>
+    <name>STD Deviation</name>
     <key>sigma</key>
-    <type>float</type>
+    <value>1</value>
+    <type>real</type>
   </param>
 
   <param>
     <name>Dimension</name>
     <key>n</key>
-    <type>real</type>
+    <value>3</value>
+    <type>int</type>
   </param>
 
   <sink>

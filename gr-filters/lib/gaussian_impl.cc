@@ -29,7 +29,7 @@ namespace gr {
   namespace filters {
 
     gaussian::sptr
-    gaussian::make(float sigma, size_t n)
+    gaussian::make(float sigma, int n)
     {
       return gnuradio::get_initial_sptr
         (new gaussian_impl(sigma, n));
@@ -38,7 +38,7 @@ namespace gr {
     /*
      * The private constructor
      */
-    gaussian_impl::gaussian_impl(float sigma, size_t n)
+    gaussian_impl::gaussian_impl(float sigma, int n)
       : gr::block("gaussian",
                   gr::io_signature::make(1, 1, sizeof(cv::Mat)),
                   gr::io_signature::make(1, 1, sizeof(cv::Mat))),
@@ -59,7 +59,6 @@ namespace gr {
     gaussian_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
       // <+forecast+> e.g. ninput_items_required[0] = noutput_items
-      ninput_items_required[0] = noutput_items;
     }
 
     int

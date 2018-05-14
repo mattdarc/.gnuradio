@@ -38,24 +38,13 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdip_runtimex" OR NOT CMAKE_INSTALL_COMPONENT)
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgnuradio-dip-1.0.0git.so.0.0.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgnuradio-dip-1.0.0git.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "")
-    endif()
-  endforeach()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/matthew/.gnuradio/gr-dip/build/lib/libgnuradio-dip-1.0.0git.so.0.0.0"
-    "/home/matthew/.gnuradio/gr-dip/build/lib/libgnuradio-dip-1.0.0git.so"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES
+    "/home/matthew/.gnuradio/gr-dip/build/lib/CMakeFiles/CMakeRelink.dir/libgnuradio-dip-1.0.0git.so.0.0.0"
+    "/home/matthew/.gnuradio/gr-dip/build/lib/CMakeFiles/CMakeRelink.dir/libgnuradio-dip-1.0.0git.so"
     )
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgnuradio-dip-1.0.0git.so.0.0.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgnuradio-dip-1.0.0git.so"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libgnuradio-dip-1.0.0git.so.0.0.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libgnuradio-dip-1.0.0git.so"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -67,7 +56,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdip_runtimex" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdip_runtimex" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE FILE FILES
     "/home/matthew/.gnuradio/gr-dip/build/lib/libgnuradio-dip.so"
     "/home/matthew/.gnuradio/gr-dip/build/lib/libgnuradio-dip-1.0.0git.so.0"
     )

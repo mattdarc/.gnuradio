@@ -6,6 +6,9 @@ file(REMOVE_RECURSE
   "libgnuradio-dip-1.0.0git.pdb"
   "libgnuradio-dip-1.0.0git.so.0.0.0"
   "libgnuradio-dip-1.0.0git.so"
+  "libgnuradio-dip-1.0.0git.pdb"
+  "CMakeFiles/CMakeRelink.dir/libgnuradio-dip-1.0.0git.so.0.0.0"
+  "CMakeFiles/CMakeRelink.dir/libgnuradio-dip-1.0.0git.so"
 )
 
 # Per-language clean rules from dependency scanning.
