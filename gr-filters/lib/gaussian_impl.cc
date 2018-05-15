@@ -42,7 +42,7 @@ namespace gr {
       : gr::block("gaussian",
                   gr::io_signature::make(1, 1, sizeof(cv::Mat)),
                   gr::io_signature::make(1, 1, sizeof(cv::Mat))),
-      d_sigma(sigma)
+      d_sigma(sigma), d_sent(false)
     {
       d_n = cv::Size(n, n);
     }
@@ -59,6 +59,7 @@ namespace gr {
     gaussian_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
       // <+forecast+> e.g. ninput_items_required[0] = noutput_items
+      ninput_items_required[0] = noutput_items;
     }
 
     int
@@ -69,25 +70,29 @@ namespace gr {
     {
       const float *in = (const float *) input_items[0];
       float *out = (float *) output_items[0];
-      cv::Mat result;
       memcpy(&d_img, in, sizeof(d_img));
 
       if(d_img.empty())
         {
-          std::cout << "Sink received empty image\n";
+          std::cout << "Received empty image\n";
           return 1;
         }
       if(!d_img.empty() && !d_sent)
         {
+          d_sent = true;
+
           // Do <+signal processing+>
-          cv::GaussianBlur(d_img, result, d_n, d_sigma);
+          cv::GaussianBlur(d_img, d_result, d_n, d_sigma);
+
           // send to buffer
-          memcpy(out, &result, sizeof(result));
+          memcpy(out, &d_result, sizeof(d_result));
 
           // Tell runtime system how many input items we consumed on
           // each input stream.
           consume_each (noutput_items);
         }
+      else
+        cv::waitKey(0);
 
 
       // Tell runtime system how many output items we produced.

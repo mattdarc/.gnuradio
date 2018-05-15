@@ -33,6 +33,7 @@ namespace gr {
     {
      private:
       cv::Mat d_img;
+      cv::Mat d_result;
       float d_sigma;
       cv::Size d_n;
       bool d_sent;
