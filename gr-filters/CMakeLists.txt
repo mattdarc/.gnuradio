@@ -141,7 +141,7 @@ find_package(Armadillo)
 # components required to the list of GR_REQUIRED_COMPONENTS (in all
 # caps such as FILTER or FFT) and change the version to the minimum
 # API compatible version required.
-set(GR_REQUIRED_COMPONENTS RUNTIME)
+set(GR_REQUIRED_COMPONENTS RUNTIME BLOCKS)
 find_package(Gnuradio "3.7.2" REQUIRED)
 list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_SOURCE_DIR}/cmake/Modules)
 include(GrVersion)
@@ -167,8 +167,8 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_BINARY_DIR}/lib
     ${CMAKE_BINARY_DIR}/include
-    ${OpenCV_INCLUDE_DIRS} # added by me
     ${Boost_INCLUDE_DIRS}
+    ${OpenCV_INCLUDE_DIRS} # added by me
     ${CPPUNIT_INCLUDE_DIRS}
     ${GNURADIO_ALL_INCLUDE_DIRS}
     ${ARMADILLO_INCLUDE_DIRS}

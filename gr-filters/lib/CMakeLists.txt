@@ -41,7 +41,7 @@ add_library(gnuradio-filters SHARED ${filters_sources})
 target_link_libraries(gnuradio-filters
   ${OpenCV_LIBS} # added by me
   ${Boost_LIBRARIES}
-  ${filters_libs}
+  ${GNURADIO_ALL_LIBRARIES}
   )
 set_target_properties(gnuradio-filters PROPERTIES DEFINE_SYMBOL "gnuradio_filters_EXPORTS")
 
