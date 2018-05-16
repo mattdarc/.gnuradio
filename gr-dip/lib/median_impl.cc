@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2013 <+YOU OR YOUR COMPANY+>.
+ * Copyright 2018 <+YOU OR YOUR COMPANY+>.
  *
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,63 +23,66 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include "image_sink_impl.h"
+#include "median_impl.h"
 
 namespace gr {
   namespace dip {
 
-    image_sink::sptr
-    image_sink::make()
+    median::sptr
+    median::make(int n)
     {
       return gnuradio::get_initial_sptr
-        (new image_sink_impl());
+        (new median_impl(n));
     }
 
     /*
      * The private constructor
      */
-    image_sink_impl::image_sink_impl()
-      : gr::block("image_sink",
-                  gr::io_signature::make(1, 1, sizeof(cv::Mat)),
-                  gr::io_signature::make(0, 0, 0))
+    median_impl::median_impl(int n)
+      : gr::sync_block("median",
+                       gr::io_signature::make(1, 1, sizeof(cv::Mat)),
+                       gr::io_signature::make(1, 1, sizeof(cv::Mat))),
+      d_sent(false), d_n(n)
     {}
 
     /*
      * Our virtual destructor.
      */
-    image_sink_impl::~image_sink_impl()
+    median_impl::~median_impl()
     {
-    }
-
-    void
-    image_sink_impl::forecast (int noutput_items,
-                               gr_vector_int &ninput_items_required)
-    {
-      /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-      ninput_items_required[0] = noutput_items;
+      d_img.release();
+      d_result.release();
     }
 
     int
-    image_sink_impl::general_work (int noutput_items,
-                                   gr_vector_int &ninput_items,
-                                   gr_vector_const_void_star &input_items,
-                                   gr_vector_void_star &output_items)
+    median_impl::work(int noutput_items,
+        gr_vector_const_void_star &input_items,
+        gr_vector_void_star &output_items)
     {
-      float *in = (float *) input_items[0];
+      const cv::Mat *in = (const cv::Mat *) input_items[0];
+      cv::Mat *out = (cv::Mat *) output_items[0];
       memcpy(&d_img, in, sizeof(d_img));
 
       if(d_img.empty())
         {
-          std::cout << "Sink received empty image\n";
-          exit(1);
+          std::cout << "Received empty image\n";
+          return 1;
         }
-      else
+      if(!d_img.empty() && !d_sent)
         {
-          cv::namedWindow("Output Image", cv::WINDOW_AUTOSIZE);
-          cv::imshow("Output Image", d_img);
-          cv::waitKey(0);
+          d_sent = true;
+
+          // Do <+signal processing+>
+          cv::medianBlur(d_img, d_result, d_n);
+
+          // send to buffer
+          memcpy(out, &d_result, sizeof(d_result));
+
+          // Tell runtime system how many input items we consumed on
+          // each input stream.
           consume_each (noutput_items);
         }
+
 
       // Tell runtime system how many output items we produced.
       return noutput_items;

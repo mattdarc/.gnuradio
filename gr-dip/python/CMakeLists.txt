@@ -45,3 +45,5 @@ GR_ADD_TEST(qa_image_source ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_
 GR_ADD_TEST(qa_image_sink ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_image_sink.py)
 GR_ADD_TEST(qa_image_save ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_image_save.py)
 GR_ADD_TEST(qa_image_throttle ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_image_throttle.py)
+GR_ADD_TEST(qa_gaussian ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_gaussian.py)
+GR_ADD_TEST(qa_median ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_median.py)

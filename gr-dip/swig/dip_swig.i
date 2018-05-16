@@ -12,6 +12,8 @@
 #include "dip/image_sink.h"
 #include "dip/image_save.h"
 #include "dip/image_throttle.h"
+#include "dip/gaussian.h"
+#include "dip/median.h"
 %}
 
 
@@ -24,3 +26,7 @@ GR_SWIG_BLOCK_MAGIC2(dip, image_save);
 
 %include "dip/image_throttle.h"
 GR_SWIG_BLOCK_MAGIC2(dip, image_throttle);
+%include "dip/gaussian.h"
+GR_SWIG_BLOCK_MAGIC2(dip, gaussian);
+%include "dip/median.h"
+GR_SWIG_BLOCK_MAGIC2(dip, median);

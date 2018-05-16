@@ -28,7 +28,9 @@ list(APPEND dip_sources
     image_source_impl.cc
     image_sink_impl.cc
     image_save_impl.cc
-    image_throttle_impl.cc )
+    image_throttle_impl.cc
+    gaussian_impl.cc
+    median_impl.cc )
 
 set(dip_sources "${dip_sources}" PARENT_SCOPE)
 if(NOT dip_sources)

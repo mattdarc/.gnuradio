@@ -25,5 +25,7 @@ install(FILES
     image_source.h
     image_sink.h
     image_save.h
-    image_throttle.h DESTINATION include/dip
+    image_throttle.h
+    gaussian.h
+    median.h DESTINATION include/dip
 )

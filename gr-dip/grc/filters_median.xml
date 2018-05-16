@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<block>
+  <name>Median Filter</name>
+  <key>filters_median</key>
+  <category>[Image Processing]/Filters</category>
+  <import>import filters</import>
+  <make>filters.median($n)</make>
+
+  <param>
+    <name>Size</name>
+    <key>n</key>
+    <value>3</value>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>
