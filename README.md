@@ -3,12 +3,12 @@
 gr-dip is a digital image processing library developed for GNU Radio using
 OpenCV (C++). Currently, the blocks that are implemented are:
 
-    * Image Source
-    * Image Save
-    * Image Sink
-    * Image Throttle
-    * Gaussian Filter
-    * Median Filter
+* Image Source
+* Image Save
+* Image Sink
+* Image Throttle
+* Gaussian Filter
+* Median Filter
 
 # Dependencies
 
