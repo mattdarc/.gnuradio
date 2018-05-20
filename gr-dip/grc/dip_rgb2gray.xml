@@ -1,28 +1,15 @@
 <?xml version="1.0"?>
 <block>
-  <name>Image Gradient</name>
-  <key>dip_gradient</key>
+  <name>Convert to Grayscale</name>
+  <key>dip_rgb2gray</key>
   <category>[Image Processing]/Core</category>
   <import>import dip</import>
-  <make>dip.gradient($method)</make>
+  <make>dip.rgb2gray()</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
        * key (makes the value accessible as $keyname, e.g. in the make node)
        * type -->
-  <param>
-    <name>Method</name>
-    <key>method</key>
-    <type>enum</type>
-    <option>
-      <name>Sobel</name>
-      <key>0</key>
-    </option>
-    <option>
-      <name>Prewitt</name>
-      <key>1</key>
-    </option>
-  </param>
 
   <!-- Make one 'sink' node per input. Sub-nodes:
        * name (an identifier for the GUI)
@@ -40,13 +27,7 @@
        * vlen
        * optional (set to 1 for optional inputs) -->
   <source>
-    <name>outX</name>
+    <name>out</name>
     <type>float</type>
   </source>
-
-  <source>
-    <name>outY</name>
-    <type>float</type>
-  </source>
-
 </block>

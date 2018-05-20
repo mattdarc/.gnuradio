@@ -16,6 +16,7 @@
 #include "dip/median.h"
 #include "dip/threshold.h"
 #include "dip/gradient.h"
+#include "dip/rgb2gray.h"
 %}
 
 
@@ -37,3 +38,5 @@ GR_SWIG_BLOCK_MAGIC2(dip, median);
 GR_SWIG_BLOCK_MAGIC2(dip, threshold);
 %include "dip/gradient.h"
 GR_SWIG_BLOCK_MAGIC2(dip, gradient);
+%include "dip/rgb2gray.h"
+GR_SWIG_BLOCK_MAGIC2(dip, rgb2gray);

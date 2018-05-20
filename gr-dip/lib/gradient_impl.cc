@@ -72,6 +72,11 @@ namespace gr {
         } else
         {
           // make sure that it is a grayscale image
+          if(d_img.channels() != 1)
+            {
+              // image is not grayscale
+              throw std::runtime_error ("Too many channels, not grayscale image");
+            }
 
           // Get the gradient of the image with the designated method
           switch(d_method)
@@ -86,8 +91,8 @@ namespace gr {
               return 1;
             }
           // memcpy(out, &d_result, sizeof(d_result));
-          outX = &d_grad_x;
-          outY = &d_grad_y;
+          *outX = d_grad_x;
+          *outY = d_grad_y;
         }
 
 

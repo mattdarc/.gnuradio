@@ -29,5 +29,6 @@ install(FILES
     gaussian.h
     median.h
     threshold.h
-    gradient.h DESTINATION include/dip
+    gradient.h
+    rgb2gray.h DESTINATION include/dip
 )

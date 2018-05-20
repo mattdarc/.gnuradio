@@ -25,5 +25,6 @@ install(FILES
     dip_median.xml
     dip_gradient.xml
     dip_threshold.xml
-    dip_gradient.xml DESTINATION share/gnuradio/grc/blocks
+    dip_gradient.xml
+    dip_rgb2gray.xml DESTINATION share/gnuradio/grc/blocks
 )

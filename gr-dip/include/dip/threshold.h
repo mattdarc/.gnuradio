@@ -46,7 +46,7 @@ namespace gr {
        * class. dip::threshold::make is the public interface for
        * creating new instances.
        */
-      static sptr make(float thresh, int method);
+      static sptr make(unsigned char thresh, int method);
     };
 
   } // namespace dip

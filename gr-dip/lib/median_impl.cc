@@ -68,7 +68,7 @@ namespace gr {
           std::cout << "Received empty image\n";
           return 1;
         }
-      if(!d_img.empty() && !d_sent)
+      else if(!d_sent)
         {
           d_sent = true;
 

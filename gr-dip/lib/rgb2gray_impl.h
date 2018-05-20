@@ -18,37 +18,26 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_DIP_THRESHOLD_IMPL_H
-#define INCLUDED_DIP_THRESHOLD_IMPL_H
+#ifndef INCLUDED_DIP_RGB2GRAY_IMPL_H
+#define INCLUDED_DIP_RGB2GRAY_IMPL_H
 
-#include <dip/threshold.h>
+#include <dip/rgb2gray.h>
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-
-typedef enum
-  {
-    Binary,
-    BinaryInv,
-    ThresholdTrunc,
-    Threshold2Zero,
-    Threshold2ZeroInv
-  } ThreshMethod;
 
 namespace gr {
   namespace dip {
 
-    class threshold_impl : public threshold
+    class rgb2gray_impl : public rgb2gray
     {
      private:
       cv::Mat d_img;
       cv::Mat d_result;
       bool d_sent;
-      unsigned char  d_thresh;
-      ThreshMethod d_method;
 
      public:
-      threshold_impl(unsigned char thresh, int method);
-      ~threshold_impl();
+      rgb2gray_impl();
+      ~rgb2gray_impl();
 
       // Where all the action really happens
       int work(int noutput_items,
@@ -59,4 +48,4 @@ namespace gr {
   } // namespace dip
 } // namespace gr
 
-#endif /* INCLUDED_DIP_THRESHOLD_IMPL_H */
+#endif /* INCLUDED_DIP_RGB2GRAY_IMPL_H */

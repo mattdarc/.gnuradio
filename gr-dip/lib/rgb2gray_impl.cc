@@ -23,39 +23,38 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include "threshold_impl.h"
+#include "rgb2gray_impl.h"
 
 namespace gr {
   namespace dip {
 
-    threshold::sptr
-    threshold::make(unsigned char thresh, int method)
+    rgb2gray::sptr
+    rgb2gray::make()
     {
       return gnuradio::get_initial_sptr
-        (new threshold_impl(thresh, method));
+        (new rgb2gray_impl());
     }
 
     /*
      * The private constructor
      */
-    threshold_impl::threshold_impl(unsigned char thresh, int method)
-      : gr::sync_block("threshold",
+    rgb2gray_impl::rgb2gray_impl()
+      : gr::sync_block("rgb2gray",
                        gr::io_signature::make(1, 1, sizeof(cv::Mat)),
-                       gr::io_signature::make(1, 1, sizeof(cv::Mat))),
-      d_thresh(thresh), d_method((ThreshMethod)method)
+                       gr::io_signature::make(1, 1, sizeof(cv::Mat)))
     {}
 
     /*
      * Our virtual destructor.
      */
-    threshold_impl::~threshold_impl()
+    rgb2gray_impl::~rgb2gray_impl()
     {
       d_img.release();
       d_result.release();
     }
 
     int
-    threshold_impl::work(int noutput_items,
+    rgb2gray_impl::work(int noutput_items,
         gr_vector_const_void_star &input_items,
         gr_vector_void_star &output_items)
     {
@@ -64,7 +63,6 @@ namespace gr {
       static int i = 0;
       memcpy(&d_img, in, sizeof(d_img));
 
-      // Do <+signal processing+>
       if(d_img.empty())
         {
           std::cout << "Received empty image\n";
@@ -74,17 +72,8 @@ namespace gr {
         {
           d_sent = true;
 
-          // make sure that it is a grayscale image
-          if(d_img.channels() != 1)
-            {
-              // image is not grayscale
-              throw std::runtime_error ("Too many channels, not grayscale image");
-            }
-
-          // threshold the image
-          cv::threshold(d_img, d_result, d_thresh,
-                        255 /* max binary value */,
-                        (int)d_method);
+          // convert to grayscale
+          cv::cvtColor(d_img, d_result, cv::COLOR_BGR2GRAY);
 
           // send to buffer
           memcpy(out, &d_result, sizeof(d_result));
