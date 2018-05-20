@@ -18,36 +18,38 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_DIP_GAUSSIAN_IMPL_H
-#define INCLUDED_DIP_GAUSSIAN_IMPL_H
 
-#include <dip/gaussian.h>
-#include <opencv2/core/core.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
+#ifndef INCLUDED_DIP_THRESHOLD_H
+#define INCLUDED_DIP_THRESHOLD_H
+
+#include <dip/api.h>
+#include <gnuradio/sync_block.h>
 
 namespace gr {
   namespace dip {
 
-    class gaussian_impl : public gaussian
+    /*!
+     * \brief <+description of block+>
+     * \ingroup dip
+     *
+     */
+    class DIP_API threshold : virtual public gr::sync_block
     {
-    private:
-      cv::Mat d_img;
-      cv::Mat d_result;
-      float d_sigma;
-      cv::Size d_n;
-      bool d_sent;
+     public:
+      typedef boost::shared_ptr<threshold> sptr;
 
-    public:
-      gaussian_impl(float sigma, int n);
-      ~gaussian_impl();
-
-      // Where all the action really happens
-      int work(int noutput_items,
-               gr_vector_const_void_star &input_items,
-               gr_vector_void_star &output_items);
+      /*!
+       * \brief Return a shared_ptr to a new instance of dip::threshold.
+       *
+       * To avoid accidental use of raw pointers, dip::threshold's
+       * constructor is in a private implementation
+       * class. dip::threshold::make is the public interface for
+       * creating new instances.
+       */
+      static sptr make(float thresh, int method);
     };
 
   } // namespace dip
 } // namespace gr
 
-#endif /* INCLUDED_DIP_GAUSSIAN_IMPL_H */
+#endif /* INCLUDED_DIP_THRESHOLD_H */

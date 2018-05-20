@@ -18,36 +18,42 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_DIP_GAUSSIAN_IMPL_H
-#define INCLUDED_DIP_GAUSSIAN_IMPL_H
+#ifndef INCLUDED_DIP_GRADIENT_IMPL_H
+#define INCLUDED_DIP_GRADIENT_IMPL_H
 
-#include <dip/gaussian.h>
+#include <dip/gradient.h>
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+
+typedef enum
+  {
+    Sobel,
+    Prewitt
+  } GradMethod;
 
 namespace gr {
   namespace dip {
 
-    class gaussian_impl : public gaussian
+    class gradient_impl : public gradient
     {
-    private:
+     private:
+      cv::Mat d_grad_x;
+      cv::Mat d_grad_y;
       cv::Mat d_img;
-      cv::Mat d_result;
-      float d_sigma;
-      cv::Size d_n;
       bool d_sent;
+      GradMethod d_method;
 
-    public:
-      gaussian_impl(float sigma, int n);
-      ~gaussian_impl();
+     public:
+      gradient_impl(int method);
+      ~gradient_impl();
 
       // Where all the action really happens
       int work(int noutput_items,
-               gr_vector_const_void_star &input_items,
-               gr_vector_void_star &output_items);
+         gr_vector_const_void_star &input_items,
+         gr_vector_void_star &output_items);
     };
 
   } // namespace dip
 } // namespace gr
 
-#endif /* INCLUDED_DIP_GAUSSIAN_IMPL_H */
+#endif /* INCLUDED_DIP_GRADIENT_IMPL_H */

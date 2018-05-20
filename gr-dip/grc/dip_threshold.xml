@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<block>
+  <name>Image Threshold</name>
+  <key>dip_threshold</key>
+  <category>[Image Processing]/Core</category>
+  <import>import dip</import>
+  <make>dip.threshold($thresh, $method)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Threshold</name>
+    <key>thresh</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Method</name>
+    <key>method</key>
+    <type>enum</type>
+    <option>
+      <name>Binary</name>
+      <key>0</key>
+    </option>
+    <option>
+      <name>Binary Inverted</name>
+      <key>1</key>
+    </option>
+    <option>
+      <name>Threshold Truncated</name>
+      <key>2</key>
+    </option>
+    <option>
+      <name>Threshold to Zero</name>
+      <key>3</key>
+    </option>
+    <option>
+      <name>Threshold to Zero Inverted</name>
+      <key>4</key>
+    </option>
+
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

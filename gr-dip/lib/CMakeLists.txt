@@ -30,7 +30,9 @@ list(APPEND dip_sources
     image_save_impl.cc
     image_throttle_impl.cc
     gaussian_impl.cc
-    median_impl.cc )
+    median_impl.cc
+    threshold_impl.cc
+    gradient_impl.cc )
 
 set(dip_sources "${dip_sources}" PARENT_SCOPE)
 if(NOT dip_sources)

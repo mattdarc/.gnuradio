@@ -27,5 +27,7 @@ install(FILES
     image_save.h
     image_throttle.h
     gaussian.h
-    median.h DESTINATION include/dip
+    median.h
+    threshold.h
+    gradient.h DESTINATION include/dip
 )

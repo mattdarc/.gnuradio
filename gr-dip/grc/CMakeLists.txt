@@ -22,5 +22,8 @@ install(FILES
     dip_image_save.xml
     dip_image_throttle.xml
     dip_gaussian.xml
-    dip_median.xml DESTINATION share/gnuradio/grc/blocks
+    dip_median.xml
+    dip_gradient.xml
+    dip_threshold.xml
+    dip_gradient.xml DESTINATION share/gnuradio/grc/blocks
 )
