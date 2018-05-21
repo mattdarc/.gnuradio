@@ -18,35 +18,27 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_DIP_GRADIENT_IMPL_H
-#define INCLUDED_DIP_GRADIENT_IMPL_H
+#ifndef INCLUDED_DIP_GRADIENT_MAGNITUDE_IMPL_H
+#define INCLUDED_DIP_GRADIENT_MAGNITUDE_IMPL_H
 
-#include <dip/gradient.h>
+#include <dip/gradient_magnitude.h>
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-
-typedef enum
-  {
-    Sobel,
-    Prewitt,
-    Laplace
-  } GradMethod;
 
 namespace gr {
   namespace dip {
 
-    class gradient_impl : public gradient
+    class gradient_magnitude_impl : public gradient_magnitude
     {
      private:
-      cv::Mat d_grad_x;
-      cv::Mat d_grad_y;
-      cv::Mat d_img;
-      GradMethod d_method;
+      cv::Mat d_dx;
+      cv::Mat d_dy;
+      cv::Mat1f d_result;
       bool d_sent;
 
      public:
-      gradient_impl(int method);
-      ~gradient_impl();
+      gradient_magnitude_impl();
+      ~gradient_magnitude_impl();
 
       // Where all the action really happens
       int work(int noutput_items,
@@ -57,4 +49,4 @@ namespace gr {
   } // namespace dip
 } // namespace gr
 
-#endif /* INCLUDED_DIP_GRADIENT_IMPL_H */
+#endif /* INCLUDED_DIP_GRADIENT_MAGNITUDE_IMPL_H */

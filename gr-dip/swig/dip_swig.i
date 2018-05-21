@@ -17,6 +17,8 @@
 #include "dip/threshold.h"
 #include "dip/gradient.h"
 #include "dip/rgb2gray.h"
+#include "dip/gradient_magnitude.h"
+#include "dip/gradient_phase.h"
 %}
 
 
@@ -40,3 +42,7 @@ GR_SWIG_BLOCK_MAGIC2(dip, threshold);
 GR_SWIG_BLOCK_MAGIC2(dip, gradient);
 %include "dip/rgb2gray.h"
 GR_SWIG_BLOCK_MAGIC2(dip, rgb2gray);
+%include "dip/gradient_magnitude.h"
+GR_SWIG_BLOCK_MAGIC2(dip, gradient_magnitude);
+%include "dip/gradient_phase.h"
+GR_SWIG_BLOCK_MAGIC2(dip, gradient_phase);

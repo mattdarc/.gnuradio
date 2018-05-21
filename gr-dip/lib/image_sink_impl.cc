@@ -41,7 +41,8 @@ namespace gr {
     image_sink_impl::image_sink_impl()
       : gr::block("image_sink",
                   gr::io_signature::make(1, 1, sizeof(cv::Mat)),
-                  gr::io_signature::make(0, 0, 0))
+                  gr::io_signature::make(0, 0, 0)),
+      d_rec(false)
     {}
 
     /*
@@ -68,12 +69,12 @@ namespace gr {
       float *in = (float *) input_items[0];
       memcpy(&d_img, in, sizeof(d_img));
 
-      if(d_img.empty())
+      if(d_img.empty() && !d_rec)
         {
           std::cout << "Sink received empty image\n";
           exit(1);
         }
-      else
+      else if(!d_rec)
         {
           cv::namedWindow("Output Image", cv::WINDOW_AUTOSIZE);
           cv::imshow("Output Image", d_img);

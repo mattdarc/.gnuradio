@@ -42,7 +42,7 @@ namespace gr {
       : gr::sync_block("gradient",
                        gr::io_signature::make(1, 1, sizeof(cv::Mat)),
                        gr::io_signature::make(2, 2, sizeof(cv::Mat))),
-      d_method(Sobel)
+      d_method(Sobel), d_sent(false)
     {}
 
     /*
@@ -63,13 +63,15 @@ namespace gr {
       const cv::Mat *in = (const cv::Mat *) input_items[0];
       cv::Mat *outX = (cv::Mat *) output_items[0];
       cv::Mat *outY = (cv::Mat *) output_items[1];
+      static int i = 0;
       memcpy(&d_img, in, sizeof(d_img));
 
-      if(d_img.empty())
+      if(d_img.empty() && !d_sent)
         {
-          std::cout << "Received empty image\n";
+          std::cout << __func__ << "Received empty image\n";
           return 1;
-        } else
+        }
+      else if(!d_sent)
         {
           // make sure that it is a grayscale image
           if(d_img.channels() != 1)
@@ -82,17 +84,19 @@ namespace gr {
           switch(d_method)
             {
             case Sobel:
-              cv::Sobel(d_img, d_grad_x, CV_16S, 1, 0, 3, 1, cv::BORDER_DEFAULT);
-              cv::Sobel(d_img, d_grad_y, CV_16S, 0, 1, 3, 1, cv::BORDER_DEFAULT);
+              cv::Sobel(d_img, d_grad_x, CV_32F, 1, 0);
+              cv::Sobel(d_img, d_grad_y, CV_32F, 0, 1);
               break;
             case Prewitt:
+            case Laplace:
             default:
               std::cout << "Unknown gradient method\n";
               return 1;
             }
-          // memcpy(out, &d_result, sizeof(d_result));
-          *outX = d_grad_x;
-          *outY = d_grad_y;
+          memcpy(outX, &d_grad_x, sizeof(d_grad_x));
+          memcpy(outY, &d_grad_y, sizeof(d_grad_y));
+          if (++i > 1) return -1;
+          d_sent = true;
         }
 
 

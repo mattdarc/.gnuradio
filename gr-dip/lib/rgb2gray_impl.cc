@@ -41,7 +41,8 @@ namespace gr {
     rgb2gray_impl::rgb2gray_impl()
       : gr::sync_block("rgb2gray",
                        gr::io_signature::make(1, 1, sizeof(cv::Mat)),
-                       gr::io_signature::make(1, 1, sizeof(cv::Mat)))
+                       gr::io_signature::make(1, 1, sizeof(cv::Mat))),
+      d_sent(false)
     {}
 
     /*
@@ -63,9 +64,9 @@ namespace gr {
       static int i = 0;
       memcpy(&d_img, in, sizeof(d_img));
 
-      if(d_img.empty())
+      if(d_img.empty() && !d_sent)
         {
-          std::cout << "Received empty image\n";
+          std::cout << __func__ << "Received empty image\n";
           return 1;
         }
       else if(!d_sent)

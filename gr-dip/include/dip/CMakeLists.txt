@@ -30,5 +30,7 @@ install(FILES
     median.h
     threshold.h
     gradient.h
-    rgb2gray.h DESTINATION include/dip
+    rgb2gray.h
+    gradient_magnitude.h
+    gradient_phase.h DESTINATION include/dip
 )

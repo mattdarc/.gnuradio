@@ -23,72 +23,72 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include "threshold_impl.h"
+#include "gradient_magnitude_impl.h"
 
 namespace gr {
   namespace dip {
 
-    threshold::sptr
-    threshold::make(unsigned char thresh, int method)
+    gradient_magnitude::sptr
+    gradient_magnitude::make()
     {
       return gnuradio::get_initial_sptr
-        (new threshold_impl(thresh, method));
+        (new gradient_magnitude_impl());
     }
 
     /*
      * The private constructor
      */
-    threshold_impl::threshold_impl(unsigned char thresh, int method)
-      : gr::sync_block("threshold",
-                       gr::io_signature::make(1, 1, sizeof(cv::Mat)),
+    gradient_magnitude_impl::gradient_magnitude_impl()
+      : gr::sync_block("gradient_magnitude",
+                       gr::io_signature::make(2, 2, sizeof(cv::Mat)),
                        gr::io_signature::make(1, 1, sizeof(cv::Mat))),
-      d_thresh(thresh), d_method((ThreshMethod)method)
+      d_sent(false)
     {}
 
     /*
      * Our virtual destructor.
      */
-    threshold_impl::~threshold_impl()
+    gradient_magnitude_impl::~gradient_magnitude_impl()
     {
-      d_img.release();
       d_result.release();
+      d_dx.release();
+      d_dy.release();
     }
 
     int
-    threshold_impl::work(int noutput_items,
+    gradient_magnitude_impl::work(int noutput_items,
         gr_vector_const_void_star &input_items,
         gr_vector_void_star &output_items)
     {
-      const cv::Mat *in = (const cv::Mat *) input_items[0];
+      const cv::Mat *inX = (const cv::Mat *) input_items[0];
+      const cv::Mat *inY = (const cv::Mat *) input_items[1];
       cv::Mat *out = (cv::Mat *) output_items[0];
       static int i = 0;
-      memcpy(&d_img, in, sizeof(d_img));
+      memcpy(&d_dx, inX, sizeof(d_dx));
+      memcpy(&d_dy, inY, sizeof(d_dy));
 
       // Do <+signal processing+>
-      if(d_img.empty())
+      if((d_dx.empty() || d_dy.empty()) && !d_sent)
         {
           std::cout << __func__ << "Received empty image\n";
           return 1;
         }
       else if(!d_sent)
         {
-          d_sent = true;
-
           // make sure that it is a grayscale image
-          if(d_img.channels() != 1)
+          if(d_dx.channels() != 1 || d_dy.channels() != 1)
             {
               // image is not grayscale
               throw std::runtime_error ("Too many channels, not grayscale image");
             }
 
-          // threshold the image
-          cv::threshold(d_img, d_result, d_thresh,
-                        255 /* max binary value */,
-                        (int)d_method);
+          // get the magnitude of the gradients
+          cv::magnitude(d_dx, d_dy, d_result);
 
           // send to buffer
           memcpy(out, &d_result, sizeof(d_result));
           if (++i > 1) return -1;
+          d_sent = true;
 
           // Tell runtime system how many input items we consumed on
           // each input stream.

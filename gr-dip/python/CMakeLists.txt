@@ -50,3 +50,5 @@ GR_ADD_TEST(qa_median ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_median
 GR_ADD_TEST(qa_threshold ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_threshold.py)
 GR_ADD_TEST(qa_gradient ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_gradient.py)
 GR_ADD_TEST(qa_rgb2gray ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_rgb2gray.py)
+GR_ADD_TEST(qa_gradient_magnitude ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_gradient_magnitude.py)
+GR_ADD_TEST(qa_gradient_phase ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_gradient_phase.py)
